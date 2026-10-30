@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { DeathRecord, ObituaryRecord, HauntingRecord, RepoRecord, HeadstoneDetail, CauseOfDeath } from "@/types";
-import { Timeline } from "@/components/Timeline";
-import { GraveyardTable } from "@/components/GraveyardTable";
-import { HeadstoneSheet } from "@/components/HeadstoneSheet";
-import { ExorciseModal } from "@/components/ExorciseModal";
+import { Timeline } from "../components/Timeline";
+import { GraveyardTable } from "../components/GraveyardTable";
+import { HeadstoneSheet } from "../components/HeadstoneSheet";
+import { ExorciseModal } from "../components/ExorciseModal";
 
 export default function NecropolisLandingPage() {
   const [repo, setRepo] = useState<RepoRecord | null>(null);

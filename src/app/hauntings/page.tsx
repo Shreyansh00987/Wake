@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { HauntingRecord, ExorciseDiff, RepoRecord } from "@/types";
-import { ExorciseModal } from "@/components/ExorciseModal";
+import { ExorciseModal } from "../../components/ExorciseModal";
 
 export default function HauntingsPage() {
   const [hauntings, setHauntings] = useState<HauntingRecord[]>([]);
