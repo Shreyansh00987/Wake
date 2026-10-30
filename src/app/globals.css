@@ -26,7 +26,7 @@
 
   /* The Solitary Ghost Accent: Luminous Marigold */
   --marigold: oklch(80% 0.17 72);
-  --marigold-glow: oklch(80% 0.17 72 / 0.22);
+  --marigold-glow: oklch(80% 0.17 72 / 0.25);
   --marigold-dim: oklch(80% 0.17 72 / 0.08);
   --marigold-border: oklch(80% 0.17 72 / 0.45);
 
@@ -44,7 +44,7 @@
   --vignette-bottom: oklch(18% 0.018 260 / 0.4);
   --selection-bg: oklch(34% 0.03 260);
   --selection-fg: oklch(98% 0.005 260);
-  --modal-scrim: rgba(0, 0, 0, 0.75);
+  --modal-scrim: rgba(0, 0, 0, 0.78);
 
   /* Diff styles */
   --diff-del-bg: oklch(24% 0.06 25 / 0.6);
@@ -104,7 +104,7 @@ html.light {
 body {
   background-color: var(--ground);
   background-image: 
-    radial-gradient(ellipse 70% 40% at 50% -10%, var(--vignette-top), transparent 70%),
+    radial-gradient(ellipse 75% 45% at 50% -10%, var(--vignette-top), transparent 70%),
     radial-gradient(circle at 100% 100%, var(--vignette-bottom), transparent 60%),
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
@@ -165,8 +165,9 @@ code, pre, .font-mono {
                 box-shadow 140ms ease;
   }
   .hover-lift:hover {
-    transform: translateY(-1px);
+    transform: translateY(-1.5px);
     border-color: var(--hairline-light);
+    box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -183,13 +184,27 @@ code, pre, .font-mono {
     border-color: var(--marigold);
   }
   50% {
-    box-shadow: 0 0 14px 2px var(--marigold-glow);
+    box-shadow: 0 0 16px 3px var(--marigold-glow);
     border-color: var(--marigold);
   }
 }
 
 .ghost-haunting-pulse {
   animation: ghostPulse 3.5s ease-in-out infinite;
+}
+
+/* Subtle Sonar Radar Scan Effect */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-sweep {
+  animation: radarSweep 12s linear infinite;
 }
 
 /* Diff coloring */
