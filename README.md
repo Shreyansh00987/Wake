@@ -1,5 +1,12 @@
 # Wake: "Every deleted line had a reason."
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://wake-necropolis.onrender.com)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Shreyansh00987%2FWake-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Shreyansh00987/Wake)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+
+> **Hosted Interactive Necropolis:** [https://wake-necropolis.onrender.com](https://wake-necropolis.onrender.com)  
+> *(Serves authentic precomputed real scans from `samples/wake.json` and `samples/cors.json` since free cloud containers lack local Ollama/GPU runtimes. For live local scans, run via `docker-compose up` or `npm run dev`).*
+
 Wake scans any Git repository, identifies every deleted file, and writes a grounded obituary for each death. It then locates the "ghosts": living code, documentation, and configuration files that still reference things that died.
 
 Deterministic Git analysis produces 100% of the facts. A local open-weight model only narrates and classifies, and every claim must cite a real commit SHA from the death's verified context pack. If a hallucinated commit SHA is detected, Wake immediately rejects it and falls back to a deterministic template obituary labeled `[TEMPLATE]` in the UI.
