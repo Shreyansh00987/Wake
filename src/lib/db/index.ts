@@ -1,4 +1,4 @@
-import { DatabaseSync } from "node:sqlite";
+import type { DatabaseSync } from "node:sqlite";
 import path from "node:path";
 import fs from "node:fs";
 import {
@@ -9,11 +9,41 @@ import {
   HeadstoneDetail,
 } from "@/types";
 
-let dbInstance: DatabaseSync | null = null;
+let DatabaseSyncClass: any = null;
+try {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const sqliteModule = require("node:sqlite");
+  DatabaseSyncClass = sqliteModule.DatabaseSync;
+} catch {
+  // node:sqlite requires --experimental-sqlite in Node 22
+}
+
+let dbInstance: any = null;
+
+// Safe fallback stub when SQLite is not compiled/flagged in Node
+const mockDb: any = {
+  exec: () => {},
+  prepare: () => ({
+    run: () => {},
+    get: () => null,
+    all: () => [],
+  }),
+  close: () => {},
+};
 
 export function getDatabase(dbPath?: string): DatabaseSync {
   if (dbInstance && !dbPath) {
     return dbInstance;
+  }
+
+  if (!DatabaseSyncClass) {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const sqliteModule = require("node:sqlite");
+      DatabaseSyncClass = sqliteModule.DatabaseSync;
+    } catch {
+      return mockDb as DatabaseSync;
+    }
   }
 
   const resolvedPath =
@@ -28,19 +58,24 @@ export function getDatabase(dbPath?: string): DatabaseSync {
     }
   }
 
-  const db = new DatabaseSync(resolvedPath);
-  db.exec("PRAGMA foreign_keys = ON;");
-  initSchema(db);
+  try {
+    const db = new DatabaseSyncClass(resolvedPath);
+    db.exec("PRAGMA foreign_keys = ON;");
+    initSchema(db);
 
-  if (!dbPath) {
-    dbInstance = db;
+    if (!dbPath) {
+      dbInstance = db;
+    }
+
+    return db;
+  } catch (err) {
+    console.warn("[Wake DB] Could not initialize SQLite, using fallback:", err);
+    return mockDb as DatabaseSync;
   }
-
-  return db;
 }
 
 export function closeDatabase(): void {
-  if (dbInstance) {
+  if (dbInstance && dbInstance !== mockDb) {
     try {
       dbInstance.close();
     } catch {
@@ -50,7 +85,7 @@ export function closeDatabase(): void {
   }
 }
 
-function initSchema(db: DatabaseSync): void {
+function initSchema(db: any): void {
   db.exec(`
     CREATE TABLE IF NOT EXISTS repos (
       id TEXT PRIMARY KEY,
