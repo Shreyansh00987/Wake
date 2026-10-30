@@ -50,7 +50,7 @@ Wake was built around a strict principle of **Honest AI**:
 
 - **GitHub Repository:** [https://github.com/Shreyansh00987/Wake](https://github.com/Shreyansh00987/Wake)
 - **Hosted Interactive Demo:** [https://wake-necropolis.onrender.com](https://wake-necropolis.onrender.com) *(Serves authentic precomputed scans from `samples/` since cloud free-tier containers lack local Ollama GPU/CPU runtimes).*
-- **Video Walkthrough (2.5 mins):** [PLACEHOLDER_VIDEO_LINK]
+- **Video Walkthrough (1:12):** [Demo Video Walkthrough (1080p Full HD MP4 with AI Narration)](https://github.com/Shreyansh00987/Wake/raw/main/wake_demo_walkthrough.mp4)
 
 ---
 

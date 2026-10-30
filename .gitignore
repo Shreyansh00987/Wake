@@ -3,7 +3,9 @@ node_modules/
 .pnp
 .pnp.js
 
-# Next.js build
+# Scratch files
+scratch/
+
 .next/
 out/
 build/
