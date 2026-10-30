@@ -1,0 +1,177 @@
+[
+  {
+    "repo": "fixtures/cors",
+    "path": "CONTRIBUTING.md",
+    "died_sha": "7e6f7eeac0c16d9abed2cb84ac4b2891a51fa3dc",
+    "last_words": "docs: revamp content (#374)",
+    "expected_cause": "rewrite"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": ".travis.yml",
+    "died_sha": "7660d3e539301dffdd613b506ab5f07403e15c0b",
+    "last_words": "build: use GitHub Actions instead of Travis CI",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": "test/mocha.opts",
+    "died_sha": "f45d53395958bea5580c2fd08a83a2cd5058fc64",
+    "last_words": "tests: remove mocha.opts file",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": ".eslintrc",
+    "died_sha": "00d6eec1049054676b00beed13453e1d556af93b",
+    "last_words": "build: use yaml eslint configuration",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": "test/.eslintrc",
+    "died_sha": "00d6eec1049054676b00beed13453e1d556af93b",
+    "last_words": "build: use yaml eslint configuration",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": "test/issue-31.js",
+    "died_sha": "c4f5092dcd13bbcd4c83bc7df8a315903d3e5c43",
+    "last_words": "tests: remove unnecessary test",
+    "expected_cause": "abandoned_experiment"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": "test/body-events.js",
+    "died_sha": "5d7beadf5d0daa7cf7388e615549ccdf5bc2c2f1",
+    "last_words": "tests: remove unnecessary body-events test",
+    "expected_cause": "abandoned_experiment"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": "test/basic-auth.js",
+    "died_sha": "8a448ccbf888ea8148c3608d48f3b093c56da98b",
+    "last_words": "tests: remove redundant basic-auth test",
+    "expected_cause": "abandoned_experiment"
+  },
+  {
+    "repo": "fixtures/cors",
+    "path": "lib/index2.js",
+    "died_sha": "4f13c630b23320dfe888008315fc493874e8b920",
+    "last_words": "wrapping up",
+    "expected_cause": "abandoned_experiment"
+  },
+  {
+    "repo": "fixtures/is",
+    "path": ".github/funding.yml",
+    "died_sha": "07ea404e8679fba0bb37a98b08ab337ac318598e",
+    "last_words": "Meta tweaks",
+    "expected_cause": "abandoned_experiment"
+  },
+  {
+    "repo": "fixtures/is",
+    "path": "tsconfig.xo.json",
+    "died_sha": "d6fc1ce0fe742f97025a305816791a4ab071637f",
+    "last_words": "Require Node.js 14, TS 4.7, and move to ESM (#167)",
+    "expected_cause": "rewrite"
+  },
+  {
+    "repo": "fixtures/is",
+    "path": ".travis.yml",
+    "died_sha": "da6bb531af964f6609903443d47fece0bbc4c53d",
+    "last_words": "Move to GitHub Actions (#129)",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/is",
+    "path": "tslint.json",
+    "died_sha": "ea4204f0b46964600a9f6e6ca3c9fc078b1e97a5",
+    "last_words": "Switch to XO for linting",
+    "expected_cause": "dependency_removal"
+  },
+  {
+    "repo": "fixtures/is",
+    "path": "index.js",
+    "died_sha": "8d8fd2b7e012f85e1a95859de6c47ebfdcbbc586",
+    "last_words": "Refactor module in TypeScript (#28)",
+    "expected_cause": "rewrite"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": ".replit",
+    "died_sha": "2db3c7701ec87a1d88b3c636dd46d3d985304bce",
+    "last_words": "Remove .replit file (#622)",
+    "expected_cause": "abandoned_experiment"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "source/templates.js",
+    "died_sha": "c987c614869ba286f0eb11c1966ee1d135c80599",
+    "last_words": "Remove support for tagged template literals (#524)",
+    "expected_cause": "dependency_removal"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "test/template-literal.js",
+    "died_sha": "c987c614869ba286f0eb11c1966ee1d135c80599",
+    "last_words": "Remove support for tagged template literals (#524)",
+    "expected_cause": "dependency_removal"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "test/constructor.js",
+    "died_sha": "d798222a5a3ff208782ce81f5fbd3babb286b3e3",
+    "last_words": "Add named exports (#432)",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "test/_supports-color.js",
+    "died_sha": "fa16f4ec37c1c25bda6ca1864bf53ecd3ea3d3c9",
+    "last_words": "Require Node.js 12 and move to ESM",
+    "expected_cause": "rewrite"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": ".travis.yml",
+    "died_sha": "d5fb377019c26e3beae55f97906c4fd1bec30402",
+    "last_words": "Move to GitHub Actions (#426)",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "test/enabled.js",
+    "died_sha": "1f77953f1a358fa8f626f0fd872792d63da6d58a",
+    "last_words": "Remove the `.enabled` property in favor of `.level` (#356)",
+    "expected_cause": "refactor"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": ".flowconfig",
+    "died_sha": "d3be9c65b11f505e0e8bd9d4796c4988bb634cf7",
+    "last_words": "Drop built-in Flow type definition",
+    "expected_cause": "dependency_removal"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "index.js.flow",
+    "died_sha": "d3be9c65b11f505e0e8bd9d4796c4988bb634cf7",
+    "last_words": "Drop built-in Flow type definition",
+    "expected_cause": "dependency_removal"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "test/_flow.js",
+    "died_sha": "d3be9c65b11f505e0e8bd9d4796c4988bb634cf7",
+    "last_words": "Drop built-in Flow type definition",
+    "expected_cause": "dependency_removal"
+  },
+  {
+    "repo": "fixtures/chalk",
+    "path": "test/windows.js",
+    "died_sha": "cd5de7a2f6a7a04fbad4c75c0364a3efc6048ade",
+    "last_words": "Remove dim style workaround for Windows (#331)",
+    "expected_cause": "refactor"
+  }
+]

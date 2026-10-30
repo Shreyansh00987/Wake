@@ -1,6 +1,6 @@
-# Phase 1 Plan: Git Ingestion, Evidence Layer & Synthetic Fixture Tests
-1. Define core domain types for deaths, commits, obituaries, hauntings, and scan progress in src/types/index.ts.
-2. Initialize SQLite persistence layer using node:sqlite with migrations for repos, deaths, obituaries, and hauntings.
-3. Implement Git Ingestion engine in src/lib/git/ingest.ts with rename tracking (git log -M) and birth/death resolution.
-4. Implement Evidence Layer in src/lib/git/evidence.ts extracting real diffstat, author attribution, lifespan, and context packs.
-5. Create synthetic git fixture repository and write unit test suite in test/ingest.test.ts covering deletions, renames, and resurrections.
+# Phase 2 Plan: Obituary Pipeline, SHA Verifier, Fallbacks & Mini-Eval
+1. Build Ollama client in src/lib/ai/client.ts with structured schema enforcement and prompt isolation of untrusted git data.
+2. Implement SHA verifier in src/lib/ai/verify.ts strictly rejecting any cited commit SHA not present in the context pack.
+3. Implement deterministic template fallback generator in src/lib/ai/template.ts labeled as "template" in the UI.
+4. Combine into unified obituary generator in src/lib/ai/obituary.ts with offline graceful degradation.
+5. Build mini-eval harness in eval/harness.ts, test on hand-labeled deaths, and generate real numbers in eval/RESULTS.md.
