@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "Wake — Archival Git Necropolis",
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className="min-h-screen bg-ground text-content selection:bg-surface selection:text-content flex flex-col justify-between">
         <div>
           {/* Top Archival Header */}
@@ -32,8 +33,8 @@ export default function RootLayout({
                 </span>
               </div>
 
-              {/* Navigation tabs */}
-              <nav className="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+              {/* Navigation tabs & Theme Toggle */}
+              <nav className="flex items-center gap-2 sm:gap-3 text-xs font-mono">
                 <a
                   href="/"
                   className="px-2.5 py-1 text-ash-light hover:text-content hover:bg-surface transition-all duration-140 rounded-sm"
@@ -53,6 +54,7 @@ export default function RootLayout({
                 >
                   + Scan Repo
                 </a>
+                <ThemeToggle />
               </nav>
             </div>
           </header>

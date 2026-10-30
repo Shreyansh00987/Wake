@@ -8,8 +8,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Archival Museum Vellum / Forensic Paper Light Palette */
+/* =========================================================================
+   DARK ARCHIVAL PALETTE (Default)
+   ========================================================================= */
+:root, html.dark {
+  /* High-Contrast Archival Obsidian Ground */
+  --ground: oklch(13.5% 0.015 260);
+  --ground-elevated: oklch(17% 0.018 260);
+  --surface: oklch(21% 0.02 260);
+  --surface-hover: oklch(25% 0.022 260);
+  --hairline: oklch(26% 0.016 260);
+  --hairline-light: oklch(36% 0.022 260);
+  --content: oklch(96% 0.005 260);
+  --ash-light: oklch(78% 0.012 260);
+  --ash: oklch(60% 0.012 260);
+  --ash-dark: oklch(42% 0.014 260);
+
+  /* The Solitary Ghost Accent: Luminous Marigold */
+  --marigold: oklch(80% 0.17 72);
+  --marigold-glow: oklch(80% 0.17 72 / 0.22);
+  --marigold-dim: oklch(80% 0.17 72 / 0.08);
+  --marigold-border: oklch(80% 0.17 72 / 0.45);
+
+  /* Cause of death archival classification specimen tints */
+  --cause-refactor: oklch(80% 0.09 215);
+  --cause-rewrite: oklch(92% 0.03 260);
+  --cause-security: oklch(74% 0.16 28);
+  --cause-dependency: oklch(78% 0.11 310);
+  --cause-abandoned: oklch(78% 0.09 135);
+  --cause-unknown: oklch(68% 0.01 260);
+
+  /* Canvas grid texture */
+  --grid-line: oklch(25% 0.012 260 / 0.35);
+  --vignette-top: oklch(24% 0.025 260 / 0.5);
+  --vignette-bottom: oklch(18% 0.018 260 / 0.4);
+  --selection-bg: oklch(34% 0.03 260);
+  --selection-fg: oklch(98% 0.005 260);
+  --modal-scrim: rgba(0, 0, 0, 0.75);
+
+  /* Diff styles */
+  --diff-del-bg: oklch(24% 0.06 25 / 0.6);
+  --diff-del-fg: oklch(88% 0.09 25);
+  --diff-del-border: oklch(65% 0.16 25);
+  --diff-ins-bg: oklch(24% 0.06 145 / 0.6);
+  --diff-ins-fg: oklch(88% 0.09 145);
+  --diff-ins-border: oklch(65% 0.16 145);
+
+  --font-ibm-plex-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-ibm-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* =========================================================================
+   LIGHT ARCHIVAL PALETTE (Vellum Paper)
+   ========================================================================= */
+html.light {
   --ground: oklch(98% 0.004 85);
   --ground-elevated: oklch(100% 0 0);
   --surface: oklch(95% 0.006 85);
@@ -21,13 +73,11 @@
   --ash: oklch(50% 0.012 260);
   --ash-dark: oklch(68% 0.01 260);
 
-  /* The Solitary Ghost Accent: Luminous Deep Amber/Marigold (High-contrast against light paper) */
   --marigold: oklch(60% 0.19 62);
   --marigold-glow: oklch(60% 0.19 62 / 0.22);
   --marigold-dim: oklch(60% 0.19 62 / 0.09);
   --marigold-border: oklch(60% 0.19 62 / 0.45);
 
-  /* Cause of death archival classification specimen tints (Crisp museum stamp tones) */
   --cause-refactor: oklch(46% 0.14 235);
   --cause-rewrite: oklch(32% 0.02 260);
   --cause-security: oklch(48% 0.18 25);
@@ -35,18 +85,29 @@
   --cause-abandoned: oklch(44% 0.13 142);
   --cause-unknown: oklch(48% 0.01 260);
 
-  --font-ibm-plex-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-ibm-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --grid-line: oklch(85% 0.008 85 / 0.45);
+  --vignette-top: oklch(94% 0.01 85 / 0.7);
+  --vignette-bottom: oklch(95% 0.008 85 / 0.5);
+  --selection-bg: oklch(88% 0.04 85);
+  --selection-fg: var(--content);
+  --modal-scrim: rgba(0, 0, 0, 0.4);
+
+  --diff-del-bg: oklch(94% 0.035 25 / 0.75);
+  --diff-del-fg: oklch(40% 0.16 25);
+  --diff-del-border: oklch(55% 0.18 25);
+  --diff-ins-bg: oklch(95% 0.035 145 / 0.75);
+  --diff-ins-fg: oklch(36% 0.14 145);
+  --diff-ins-border: oklch(50% 0.16 145);
 }
 
-/* Atmospheric archival drafting grid canvas on warm vellum ground */
+/* Atmospheric archival drafting grid canvas */
 body {
   background-color: var(--ground);
   background-image: 
-    radial-gradient(ellipse 70% 40% at 50% -10%, oklch(94% 0.01 85 / 0.7), transparent 70%),
-    radial-gradient(circle at 100% 100%, oklch(95% 0.008 85 / 0.5), transparent 60%),
-    linear-gradient(to right, oklch(85% 0.008 85 / 0.45) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(85% 0.008 85 / 0.45) 1px, transparent 1px);
+    radial-gradient(ellipse 70% 40% at 50% -10%, var(--vignette-top), transparent 70%),
+    radial-gradient(circle at 100% 100%, var(--vignette-bottom), transparent 60%),
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
   background-attachment: fixed;
   color: var(--content);
@@ -73,8 +134,8 @@ body {
 
 /* Text Selection */
 ::selection {
-  background: oklch(88% 0.04 85);
-  color: var(--content);
+  background: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 code, pre, .font-mono {
@@ -106,7 +167,6 @@ code, pre, .font-mono {
   .hover-lift:hover {
     transform: translateY(-1px);
     border-color: var(--hairline-light);
-    box-shadow: 0 2px 8px -2px oklch(20% 0.01 260 / 0.06);
   }
 }
 
@@ -123,8 +183,8 @@ code, pre, .font-mono {
     border-color: var(--marigold);
   }
   50% {
-    box-shadow: 0 0 12px 2px var(--marigold-glow);
-    border-color: oklch(68% 0.20 62);
+    box-shadow: 0 0 14px 2px var(--marigold-glow);
+    border-color: var(--marigold);
   }
 }
 
@@ -132,20 +192,20 @@ code, pre, .font-mono {
   animation: ghostPulse 3.5s ease-in-out infinite;
 }
 
-/* Diff coloring in light theme */
+/* Diff coloring */
 .diff-del {
-  background-color: oklch(94% 0.035 25 / 0.75);
-  color: oklch(40% 0.16 25);
-  border-left: 2px solid oklch(55% 0.18 25);
+  background-color: var(--diff-del-bg);
+  color: var(--diff-del-fg);
+  border-left: 2px solid var(--diff-del-border);
 }
 
 .diff-ins {
-  background-color: oklch(95% 0.035 145 / 0.75);
-  color: oklch(36% 0.14 145);
-  border-left: 2px solid oklch(50% 0.16 145);
+  background-color: var(--diff-ins-bg);
+  color: var(--diff-ins-fg);
+  border-left: 2px solid var(--diff-ins-border);
 }
 
 .diff-hunk {
-  background-color: oklch(93% 0.008 85 / 0.9);
-  color: oklch(45% 0.02 260);
+  background-color: var(--surface);
+  color: var(--ash);
 }

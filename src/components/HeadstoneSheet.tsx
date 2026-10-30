@@ -58,7 +58,10 @@ export function HeadstoneSheet({
   const diffLines = (death.final_diff || "").split("\n");
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-[2px] animate-in fade-in duration-150">
+    <div
+      className="fixed inset-0 z-50 flex justify-end backdrop-blur-[2px] animate-in fade-in duration-150"
+      style={{ backgroundColor: "var(--modal-scrim)" }}
+    >
       {/* Click backdrop to close */}
       <div className="flex-1" onClick={onClose} />
 
