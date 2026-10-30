@@ -1,6 +1,6 @@
-# Phase 3 Plan: Haunting Detector & Exorcise Diff Generation
-1. Implement cross-platform ripgrep wrapper in src/lib/ghosts/ripgrep.ts using child_process argument arrays and @vscode/ripgrep.
-2. Build Haunting Detector in src/lib/ghosts/hauntings.ts with token extraction, path searching, and confidence scoring.
-3. Implement false-positive filters ignoring lockfiles, vendored directories (node_modules, dist, .git), and generic short tokens.
-4. Implement Exorcise diff generator in src/lib/ghosts/exorcise.ts producing copy-only standard unified diffs without modifying files.
-5. Write unit test suite in test/hauntings.test.ts verifying ghost reference matching, confidence rankings, and clean diff generation.
+# Phase 4 Plan: Web Application & Archival Minimalism UI via Impeccable
+1. Build Next.js App Router API routes (/api/scan SSE, /api/graveyard, /api/headstone/[id], /api/hauntings, /api/exorcise/[id]) with path traversal checks.
+2. Establish root layout with self-hosted IBM Plex fonts, CSS variables, oklch color ground, and hairline styling.
+3. Build Landing & Necropolis views with D3 timeline, staggering marks, and real live-rendered data from Wake's own history.
+4. Build Headstone inspection sheet with verified obituaries, clickable commit SHA chips, and final deletion diffs.
+5. Build Hauntings ledger featuring solitary marigold accent badges, code snippets, and copy-only Exorcise unified diff modal.

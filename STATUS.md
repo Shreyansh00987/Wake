@@ -1,27 +1,32 @@
 # Project Status
 
-## Current Phase: P3 Complete -> Transitioning to P4 (UI & Web Application via Impeccable)
+## Current Phase: P4 Complete -> Transitioning to P5 (Precomputed Samples, Docker & Deployment)
 
-### Done (P3)
-- Implemented cross-platform ripgrep wrapper in `src/lib/ghosts/ripgrep.ts` using `@vscode/ripgrep` bundled binary with strict child_process argument arrays.
-- Built Haunting Detector in `src/lib/ghosts/hauntings.ts` to identify surviving references to dead files, import paths, and exported symbols.
-- Added robust false-positive filters: ignores vendored packages (`node_modules`), lockfiles (`package-lock.json`, `yarn.lock`, etc.), build directories, requires token length >= 4 chars, filters generic language keywords, and ranks matches by confidence.
-- Implemented Exorcise Diff Generator in `src/lib/ghosts/exorcise.ts` producing standard copy-only unified diffs (strictly read-only; zero mutation of user repositories).
-- Created comprehensive unit test suite in `test/hauntings.test.ts` (100% pass across all 12 tests in the project).
+### Done (P4)
+- Built complete Next.js 14 App Router API layer:
+  - `POST /api/scan`: streaming Server-Sent Events (SSE) with path traversal security.
+  - `GET /api/graveyard`: fetches current repository tombstone records and haunting counts.
+  - `GET /api/headstone/[id]`: detailed inspection artifact with grounded obituaries.
+  - `GET /api/hauntings`: repository ghost references.
+  - `POST /api/exorcise/[id]`: generates copy-only unified diffs for purging dangling references.
+  - `GET /api/status`: health and runtime monitor for local Ollama daemon.
+- Created archival minimalist UI components via Impeccable:
+  - `Timeline.tsx`: interactive D3.js timeline with 40ms staggered mark entrance and mobile vertical month list.
+  - `HeadstoneSheet.tsx`: sliding inspection drawer with clickable SHA chips expanding verified commits, vital dates, and final diffs.
+  - `GraveyardTable.tsx`: hairline rows with lift-on-hover (1px over 150ms) and tabular numerals.
+  - `ExorciseModal.tsx`: unified diff viewer with one-click copy and read-only guarantee.
+- Implemented core screens:
+  - Landing / Necropolis (`src/app/page.tsx`): live-rendered with real historical data from Wake's own repo, offline terminal quickstart, and feature headstones.
+  - Archaeological Scanner (`src/app/scan/page.tsx`): live SSE progress bar and scrolling event log.
+  - Hauntings Ledger (`src/app/hauntings/page.tsx`): ghost inspector with Marigold accent badges and instant Exorcise diff generator.
+- Verified offline typography with self-hosted IBM Plex Sans & IBM Plex Mono (`@fontsource`).
+- Generated `DESIGN.md` and verified with `impeccable detect` (0 anti-pattern findings).
+- Verified production build with `npm run build` (all 6 static and dynamic routes compiled successfully).
 
-### Next (P4)
-- Build the Web Application and UI per the Impeccable design system specification:
-  - Dark graphite ground `oklch(16% 0.01 260)`, crisp text `oklch(92% 0.01 260)`, ash-grey ramp for dead code.
-  - ONE accent: Marigold `oklch(78% 0.15 75)` strictly and solely for "still haunting".
-  - Hairline borders (1px), 2px corners, 4px spacing scale, IBM Plex Sans & IBM Plex Mono self-hosted fonts.
-  - Landing Screen (live-rendered real graveyard of Wake's own repo, plain headline, hairline rows, offline instructions).
-  - Scan Screen with Server-Sent Events (SSE) streaming progress (`POST /api/scan`).
-  - Necropolis View with D3.js timeline visualization of deaths.
-  - Headstone Drawer / Sheet with clickable SHA chips expanding verified commits.
-  - Hauntings View with confidence ranking, code snippets, and Exorcise modal/diff viewer.
-  - All states: empty state ("Nothing has died here yet."), error state (Ollama offline guide with copyable `ollama serve`), path traversal protections.
-- Run `/impeccable document` to record design system in `DESIGN.md`.
+### Next (P5)
+- Generate precomputed sample scans for the hosted demo in `samples/` (`samples/wake.json`, `samples/cors.json`).
+- Write `Dockerfile` and `docker-compose.yml` for zero-friction one-command local execution.
+- Create deployment configuration (Render / Docker setup) serving precomputed samples for static/read-only exploration.
 
 ### Risks & Mitigations
-- **SSE Stream In Sandbox / Localhost:** SSE requires proper headers (`text/event-stream`, `Cache-Control: no-cache`, `Connection: keep-alive`). Test API route to ensure streaming chunks arrive seamlessly.
-- **Font Hosting:** `@fontsource/ibm-plex-sans` and `@fontsource/ibm-plex-mono` imported in global CSS to guarantee 100% offline functionality.
+- **Hosted Cloud Inference:** Open-weight models require GPU/CPU resources that cloud free tiers cannot run; hosted demo is precomputed from real local runs, and the README/post explicitly and transparently states this.
