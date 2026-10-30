@@ -34,7 +34,7 @@ export function ExorciseModal({ diff, isOpen, onClose }: ExorciseModalProps) {
   const diffLines = diff.diff.split("\n");
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-[2px] p-4 animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-[2px] p-4 animate-in fade-in duration-150">
       <div className="bg-ground border border-hairline w-full max-w-2xl p-5 sm:p-7 text-content shadow-2xl space-y-5">
         {/* Header */}
         <div className="flex items-start justify-between border-b border-hairline pb-3">

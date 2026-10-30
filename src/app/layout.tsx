@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className="min-h-screen bg-ground text-content selection:bg-surface selection:text-content flex flex-col justify-between">
         <div>
           {/* Top Archival Header */}
