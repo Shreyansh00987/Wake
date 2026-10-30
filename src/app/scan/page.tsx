@@ -12,14 +12,21 @@ export default function ScanPage() {
   const [logs, setLogs] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  async function handleStartScan(e: React.FormEvent) {
-    e.preventDefault();
+  const pipelineStages = [
+    { key: "discovering", label: "1. Discover Deletions" },
+    { key: "extracting_evidence", label: "2. Extract Evidence" },
+    { key: "generating_obituaries", label: "3. Grounded Obituaries" },
+    { key: "detecting_hauntings", label: "4. Detect Ghosts" },
+  ];
+
+  async function triggerScan(targetPath?: string) {
+    const finalPath = (targetPath !== undefined ? targetPath : repoPath).trim();
     setScanning(true);
     setError(null);
     setLogs([]);
     setProgress({
       stage: "discovering",
-      message: "Initializing scan pipeline...",
+      message: "Initializing archaeological scan pipeline...",
       current: 0,
       total: 0,
     });
@@ -28,7 +35,7 @@ export default function ScanPage() {
       const res = await fetch("/api/scan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ repoPath: repoPath.trim() || undefined }),
+        body: JSON.stringify({ repoPath: finalPath || undefined }),
       });
 
       if (!res.ok) {
@@ -57,7 +64,10 @@ export default function ScanPage() {
           try {
             const data: ScanProgress = JSON.parse(ev.substring(6));
             setProgress(data);
-            setLogs((prev) => [...prev.slice(-30), `[${data.stage}] ${data.message}`]);
+            setLogs((prev) => [
+              ...prev.slice(-35),
+              `[${new Date().toLocaleTimeString()}] [${data.stage}] ${data.message}`,
+            ]);
 
             if (data.stage === "complete") {
               setTimeout(() => {
@@ -75,114 +85,158 @@ export default function ScanPage() {
     }
   }
 
+  function handleFormSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    triggerScan();
+  }
+
   return (
     <div className="max-w-3xl mx-auto space-y-8 font-mono text-xs">
       <div>
-        <span className="text-[10px] tracking-widest uppercase text-ash block mb-1">
-          INGESTION & HISTORICAL ARCHAEOLOGY
-        </span>
-        <h1 className="text-xl font-medium text-content">
+        <div className="flex items-center gap-2 mb-1.5 font-mono text-[10px] tracking-widest text-ash uppercase">
+          <span>INGESTION & HISTORICAL ARCHAEOLOGY</span>
+          <span>//</span>
+          <span>READ-ONLY PIPELINE</span>
+        </div>
+        <h1 className="text-xl sm:text-3xl font-mono font-medium text-content tracking-tight">
           Scan Repository History
         </h1>
-        <p className="font-sans text-xs text-ash-light mt-1">
-          Provide a local git directory. Wake is strictly read-only and never modifies your repository files.
+        <p className="font-sans text-xs text-ash-light mt-1.5 leading-relaxed">
+          Provide any local git repository path. Wake operates in strict read-only mode, extracting deletions, generating grounded obituaries, and locating dangling ghost references.
         </p>
       </div>
 
-      {/* Input Form */}
-      <form onSubmit={handleStartScan} className="border border-hairline p-4 sm:p-6 bg-surface/40 space-y-4">
-        <div>
-          <label htmlFor="repoPathInput" className="block text-ash text-[10px] uppercase mb-1.5">
-            Local Repository Path
-          </label>
-          <input
-            id="repoPathInput"
-            type="text"
-            value={repoPath}
-            onChange={(e) => setRepoPath(e.target.value)}
+      {/* Preset Buttons for Quick Testing */}
+      <div className="p-3.5 bg-ground-elevated/70 border border-hairline space-y-2">
+        <span className="text-[10px] text-ash uppercase tracking-wider block font-medium">
+          DEMO ARCHAEOLOGICAL TARGETS
+        </span>
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
             disabled={scanning}
-            placeholder="Leave empty to scan Wake's own repository, or enter absolute path"
-            className="w-full bg-ground border border-hairline focus:border-content text-content px-3 py-2 text-xs font-mono outline-none transition-colors"
-          />
+            onClick={() => {
+              setRepoPath("");
+              triggerScan("");
+            }}
+            className="px-3 py-1.5 bg-ground border border-hairline hover:border-hairline-light text-content text-[11px] font-mono transition-colors"
+          >
+            ✦ Wake (Self History)
+          </button>
+          <button
+            type="button"
+            disabled={scanning}
+            onClick={() => {
+              setRepoPath("fixtures/cors");
+              triggerScan("fixtures/cors");
+            }}
+            className="px-3 py-1.5 bg-ground border border-hairline hover:border-hairline-light text-ash-light hover:text-content text-[11px] font-mono transition-colors"
+          >
+            fixtures/cors (Express middleware)
+          </button>
+          <button
+            type="button"
+            disabled={scanning}
+            onClick={() => {
+              setRepoPath("fixtures/chalk");
+              triggerScan("fixtures/chalk");
+            }}
+            className="px-3 py-1.5 bg-ground border border-hairline hover:border-hairline-light text-ash-light hover:text-content text-[11px] font-mono transition-colors"
+          >
+            fixtures/chalk (Terminal styling)
+          </button>
         </div>
+      </div>
 
-        {/* Quick Suggestion Buttons */}
-        <div className="flex flex-wrap items-center gap-2 text-[10px] text-ash">
-          <span>Preset suggestions:</span>
-          <button
-            type="button"
-            onClick={() => setRepoPath("")}
-            className="px-2 py-0.5 border border-hairline hover:border-hairline-light hover:text-content"
-          >
-            Wake (Current)
-          </button>
-          <button
-            type="button"
-            onClick={() => setRepoPath("fixtures/cors")}
-            className="px-2 py-0.5 border border-hairline hover:border-hairline-light hover:text-content"
-          >
-            fixtures/cors (MIT)
-          </button>
-          <button
-            type="button"
-            onClick={() => setRepoPath("fixtures/is")}
-            className="px-2 py-0.5 border border-hairline hover:border-hairline-light hover:text-content"
-          >
-            fixtures/is (MIT)
-          </button>
-        </div>
-
-        {error && (
-          <div className="p-3 border border-red-500/50 bg-red-950/20 text-red-200 text-xs">
-            {error}
+      {/* Scan Input Form */}
+      <form onSubmit={handleFormSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="repoPath" className="block text-ash text-[11px] uppercase tracking-wider mb-1.5 font-medium">
+            LOCAL REPOSITORY DIRECTORY PATH
+          </label>
+          <div className="flex gap-2">
+            <input
+              id="repoPath"
+              type="text"
+              value={repoPath}
+              onChange={(e) => setRepoPath(e.target.value)}
+              placeholder="e.g. D:/Project/Wake or fixtures/cors (leave blank for Wake self-history)"
+              disabled={scanning}
+              className="flex-1 bg-ground border border-hairline px-3 py-2 text-content placeholder:text-ash-dark outline-none focus:border-content transition-colors font-mono text-xs"
+            />
+            <button
+              type="submit"
+              disabled={scanning}
+              className="px-5 py-2 bg-surface hover:bg-surface-hover border border-hairline-light text-content font-medium transition-colors shrink-0 disabled:opacity-50"
+            >
+              {scanning ? "Archaeology in Progress..." : "Begin Scan →"}
+            </button>
           </div>
-        )}
-
-        <button
-          type="submit"
-          disabled={scanning}
-          className={`w-full py-2.5 px-4 font-mono text-xs uppercase tracking-wider transition-all border ${
-            scanning
-              ? "bg-surface border-hairline text-ash cursor-not-allowed"
-              : "border-content text-ground bg-content hover:bg-ground hover:text-content hover:border-content"
-          }`}
-        >
-          {scanning ? "Scanning in progress..." : "Begin Archaeological Scan"}
-        </button>
+        </div>
       </form>
 
-      {/* Progress & Live Event Log */}
-      {scanning && progress && (
-        <div className="border border-hairline p-4 sm:p-6 bg-surface/30 space-y-4">
-          <div className="flex items-center justify-between text-[10px] text-ash uppercase">
-            <span>Scan Pipeline: {progress.stage.replace("_", " ")}</span>
-            <span className="tabular-nums">
-              {progress.total > 0 ? `${progress.current} / ${progress.total}` : "Analyzing"}
+      {/* Pipeline Status Stepper */}
+      {scanning && (
+        <div className="border border-hairline p-4 space-y-4 bg-ground-elevated/40">
+          <div className="flex items-center justify-between text-[11px]">
+            <span className="text-content font-medium uppercase tracking-wider">
+              PIPELINE EXECUTION PROGRESS
+            </span>
+            <span className="text-ash tabular-nums">
+              {progress?.current || 0} / {progress?.total || "?"} items
             </span>
           </div>
 
-          {/* Progress bar */}
-          <div className="w-full h-1 bg-ground border border-hairline overflow-hidden">
-            <div
-              className="h-full bg-content transition-all duration-150"
-              style={{
-                width: progress.total > 0 ? `${(progress.current / progress.total) * 100}%` : "30%",
-              }}
-            />
+          {/* Stepper Steps */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px]">
+            {pipelineStages.map((stg) => {
+              const isCurrent = progress?.stage === stg.key;
+              const isDone =
+                progress?.stage === "complete" ||
+                (stg.key === "discovering" && progress?.stage !== "discovering") ||
+                (stg.key === "extracting_evidence" &&
+                  ["generating_obituaries", "detecting_hauntings", "complete"].includes(
+                    progress?.stage || ""
+                  )) ||
+                (stg.key === "generating_obituaries" &&
+                  ["detecting_hauntings", "complete"].includes(progress?.stage || ""));
+
+              return (
+                <div
+                  key={stg.key}
+                  className={`p-2 border transition-all ${
+                    isCurrent
+                      ? "border-marigold bg-marigold-dim text-marigold"
+                      : isDone
+                      ? "border-hairline bg-surface text-content"
+                      : "border-hairline/40 text-ash-dark"
+                  }`}
+                >
+                  <div className="truncate font-medium">{stg.label}</div>
+                  <div className="text-[9px] mt-0.5">
+                    {isCurrent ? "Active..." : isDone ? "✓ Done" : "Queued"}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
-          <div className="text-ash-light font-sans text-xs">
-            {progress.message}
-          </div>
-
-          {/* Scrolling Event Terminal Log */}
-          <div className="p-3 bg-ground border border-hairline max-h-48 overflow-y-auto space-y-1 text-[11px] text-ash">
-            {logs.map((log, idx) => (
-              <div key={idx} className="font-mono truncate">
+          {/* Real-time Streaming Logs */}
+          <div className="bg-ground border border-hairline p-3 h-48 overflow-y-auto space-y-1 font-mono text-[11px] leading-relaxed">
+            {logs.map((log, i) => (
+              <div key={i} className="text-ash-light">
                 {log}
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* Error Banner */}
+      {error && (
+        <div className="border border-cause-security/60 bg-cause-security/10 p-4 text-cause-security space-y-1">
+          <div className="font-medium text-xs">Scan Interrupted</div>
+          <p className="font-sans text-xs">{error}</p>
         </div>
       )}
     </div>

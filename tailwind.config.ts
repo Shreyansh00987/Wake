@@ -9,15 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ground: "oklch(16% 0.01 260)",
-        surface: "oklch(20% 0.01 260)",
-        hairline: "oklch(26% 0.01 260)",
-        "hairline-light": "oklch(32% 0.01 260)",
-        content: "oklch(92% 0.01 260)",
-        "ash-light": "oklch(75% 0.01 260)",
-        ash: "oklch(60% 0.01 260)",
-        "ash-dark": "oklch(40% 0.01 260)",
-        marigold: "oklch(78% 0.15 75)", // EXCLUSIVELY for "still haunting"
+        ground: "var(--ground)",
+        "ground-elevated": "var(--ground-elevated)",
+        surface: "var(--surface)",
+        "surface-hover": "var(--surface-hover)",
+        hairline: "var(--hairline)",
+        "hairline-light": "var(--hairline-light)",
+        content: "var(--content)",
+        "ash-light": "var(--ash-light)",
+        ash: "var(--ash)",
+        "ash-dark": "var(--ash-dark)",
+        marigold: "var(--marigold)", // Strictly reserved for "still haunting"
+        "marigold-glow": "var(--marigold-glow)",
+        "marigold-dim": "var(--marigold-dim)",
+        "marigold-border": "var(--marigold-border)",
+        cause: {
+          refactor: "var(--cause-refactor)",
+          rewrite: "var(--cause-rewrite)",
+          security: "var(--cause-security)",
+          dependency: "var(--cause-dependency)",
+          abandoned: "var(--cause-abandoned)",
+          unknown: "var(--cause-unknown)",
+        },
       },
       fontFamily: {
         sans: ["var(--font-ibm-plex-sans)", "sans-serif"],

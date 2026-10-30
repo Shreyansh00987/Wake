@@ -9,26 +9,72 @@
 @tailwind utilities;
 
 :root {
-  --ground: oklch(16% 0.01 260);
-  --surface: oklch(20% 0.01 260);
-  --hairline: oklch(26% 0.01 260);
-  --hairline-light: oklch(34% 0.01 260);
-  --content: oklch(92% 0.01 260);
+  /* High-Contrast Archival Obsidian Ground */
+  --ground: oklch(13% 0.014 260);
+  --ground-elevated: oklch(16.5% 0.016 260);
+  --surface: oklch(20% 0.018 260);
+  --surface-hover: oklch(24% 0.02 260);
+  --hairline: oklch(25% 0.015 260);
+  --hairline-light: oklch(34% 0.02 260);
+  --content: oklch(96% 0.005 260);
+  --ash-light: oklch(78% 0.01 260);
   --ash: oklch(60% 0.01 260);
-  --ash-light: oklch(75% 0.01 260);
-  --ash-dark: oklch(40% 0.01 260);
-  --marigold: oklch(78% 0.15 75); /* Strictly and solely for "still haunting" */
+  --ash-dark: oklch(42% 0.012 260);
+
+  /* The Solitary Ghost Accent: Luminous Marigold */
+  --marigold: oklch(80% 0.17 72);
+  --marigold-glow: oklch(80% 0.17 72 / 0.22);
+  --marigold-dim: oklch(80% 0.17 72 / 0.08);
+  --marigold-border: oklch(80% 0.17 72 / 0.4);
+
+  /* Cause of death archival classification specimen tints */
+  --cause-refactor: oklch(80% 0.08 215);
+  --cause-rewrite: oklch(92% 0.02 260);
+  --cause-security: oklch(74% 0.16 28);
+  --cause-dependency: oklch(78% 0.11 310);
+  --cause-abandoned: oklch(78% 0.09 135);
+  --cause-unknown: oklch(68% 0.01 260);
 
   --font-ibm-plex-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-ibm-plex-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+/* Atmospheric archival drafting grid canvas */
 body {
   background-color: var(--ground);
+  background-image: 
+    radial-gradient(ellipse 70% 40% at 50% -10%, oklch(22% 0.018 260 / 0.45), transparent 70%),
+    radial-gradient(circle at 100% 100%, oklch(16% 0.015 260 / 0.3), transparent 60%),
+    linear-gradient(to right, oklch(25% 0.01 260 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(25% 0.01 260 / 0.08) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+  background-attachment: fixed;
   color: var(--content);
   font-family: var(--font-ibm-plex-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Archival Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ground);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hairline-light);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ash);
+}
+
+/* Text Selection */
+::selection {
+  background: oklch(34% 0.03 260);
+  color: oklch(98% 0.005 260);
 }
 
 code, pre, .font-mono {
@@ -52,7 +98,9 @@ code, pre, .font-mono {
 /* Restrained motion */
 @media (prefers-reduced-motion: no-preference) {
   .hover-lift {
-    transition: transform 150ms ease, border-color 150ms ease;
+    transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 140ms ease, 
+                background-color 140ms ease;
   }
   .hover-lift:hover {
     transform: translateY(-1px);
@@ -64,4 +112,38 @@ code, pre, .font-mono {
 :focus-visible {
   outline: 2px solid var(--content);
   outline-offset: 2px;
+}
+
+/* Ghost pulse glow */
+@keyframes ghostPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--marigold-glow);
+    border-color: var(--marigold);
+  }
+  50% {
+    box-shadow: 0 0 14px 2px var(--marigold-glow);
+    border-color: oklch(86% 0.18 72);
+  }
+}
+
+.ghost-haunting-pulse {
+  animation: ghostPulse 3.5s ease-in-out infinite;
+}
+
+/* Diff coloring */
+.diff-del {
+  background-color: oklch(24% 0.06 25 / 0.55);
+  color: oklch(88% 0.09 25);
+  border-left: 2px solid oklch(65% 0.16 25);
+}
+
+.diff-ins {
+  background-color: oklch(24% 0.06 145 / 0.55);
+  color: oklch(88% 0.09 145);
+  border-left: 2px solid oklch(65% 0.16 145);
+}
+
+.diff-hunk {
+  background-color: oklch(20% 0.015 260 / 0.7);
+  color: oklch(75% 0.05 260);
 }

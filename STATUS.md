@@ -1,8 +1,21 @@
 # Project Status
 
-## Current Phase: Complete (All Phases P0–P6 Complete & Verified)
+## Current Phase: Complete (All Phases P0–P6 Complete & Polished)
 
-### Done (P6)
+### Done (UI Visual Polish Pass)
+- Elevated Archival Minimalism styling across all views adhering strictly to the "Ghost in the Machine" aesthetic:
+  - Atmospheric drafting grid background (`32px` hairline grid with radial vignettes).
+  - High-contrast obsidian ground `oklch(13% 0.014 260)` with bone-white content `oklch(96% 0.005 260)`.
+  - Radiant Marigold accent `oklch(80% 0.17 72)` with ghost pulse animation reserved exclusively for active hauntings.
+  - Specimen color tints for causes of death (glacier cyan, platinum, crimson ember, amethyst iris, moss sage).
+  - D3 Timeline with interactive floating tooltips, vertical time ticks, and ghost halo indicators.
+  - Graveyard Table with live search, cause dropdown, haunting toggle, and sort by date/lifespan/deletions.
+  - Headstone Sheet drawer with lifeline trajectory caliper, verified commit SHA chips, and syntax-colored diffs.
+  - Hauntings Radar page with snippet preview and one-click copyable Exorcise unified diff.
+  - Verified 12/12 unit tests pass and production build compiles with 0 errors.
+  - Next.js server live at `http://localhost:3000`.
+
+### Previous Done (P6)
 - Finalized comprehensive `README.md` with:
   - Architecture breakdown distinguishing between open-source software and open-weight models (`gemma3:1b`, 806 MB, Gemma Terms of Use; `qwen2.5-coder:1.5b` fallback).
   - Quickstart guides for both local npm development and one-command Docker Compose.
@@ -13,4 +26,4 @@
 - Verified test suite: all 12 unit tests pass across ingestion, real-world fixtures (`expressjs/cors`), obituary citation verification, and ripgrep haunting detection.
 
 ### Next
-- User executes manual tasks (domain registration, video recording, publishing DEV post).
+- User executes manual tasks (recording demo video, publishing DEV post).
