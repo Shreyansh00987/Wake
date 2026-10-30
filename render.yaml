@@ -1,0 +1,19 @@
+# Render Deployment Specification for Wake
+# NOTE: Hosted cloud instances serve authentic precomputed real scans from samples/
+# because open-weight LLMs (Ollama) require local host compute or GPU instances.
+services:
+  - type: web
+    name: wake-necropolis
+    env: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: WAKE_MODEL
+        value: gemma3:1b
+      - key: MAX_DEATHS_CAP
+        value: 50

@@ -1,0 +1,212 @@
+{
+  "exported_at": "2026-10-30T13:38:49.542Z",
+  "generator": "Wake Precomputed Sample Exporter",
+  "model": "gemma3:1b",
+  "repo": {
+    "id": "eefb118c468c369e",
+    "name": "Wake",
+    "path": "D:\\Project\\Wake",
+    "last_scanned_at": "2026-10-30T13:38:49.542Z",
+    "death_count": 3,
+    "haunting_count": 2
+  },
+  "deaths": [
+    {
+      "id": "4aab24fe9f626cc6",
+      "repo_id": "eefb118c468c369e",
+      "path": "src/lib/legacy_prototype.ts",
+      "born_sha": "a4ca569dccfde708a684338f3c8637b690328184",
+      "born_date": "2026-10-30T13:32:45.000Z",
+      "died_sha": "dc83d4fbb75f34771685923c37655143c48437f4",
+      "died_date": "2026-10-30T13:33:08.000Z",
+      "lifespan_days": 0,
+      "last_words": "refactor: purge deprecated legacy prototype, old telemetry, and temporary config modules (#12)",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 5
+      },
+      "authors": [
+        "Shreyansh00987"
+      ],
+      "first_version_snippet": "// Temporary prototype artifact for early death verification\nexport const LEGACY_PROTOTYPE_VERSION = \"0.0.1-alpha\";\nexport function deprecatedArtifactMarker() {\n  return \"Artifact slated for archival deletion\";\n}\n",
+      "final_diff": "diff --git a/src/lib/legacy_prototype.ts b/src/lib/legacy_prototype.ts\ndeleted file mode 100644\nindex 48ea7c2..0000000\n--- a/src/lib/legacy_prototype.ts\n+++ /dev/null\n@@ -1,5 +0,0 @@\n-// Temporary prototype artifact for early death verification\n-export const LEGACY_PROTOTYPE_VERSION = \"0.0.1-alpha\";\n-export function deprecatedArtifactMarker() {\n-  return \"Artifact slated for archival deletion\";\n-}\n",
+      "commit_history": [
+        {
+          "sha": "dc83d4fbb75f34771685923c37655143c48437f4",
+          "shortSha": "dc83d4f",
+          "author": "Shreyansh00987",
+          "date": "2026-10-30T13:33:08.000Z",
+          "message": "refactor: purge deprecated legacy prototype, old telemetry, and temporary config modules (#12)"
+        },
+        {
+          "sha": "a4ca569dccfde708a684338f3c8637b690328184",
+          "shortSha": "a4ca569",
+          "author": "Shreyansh00987",
+          "date": "2026-10-30T13:32:45.000Z",
+          "message": "feat(prototype): add temporary legacy prototype module for lifecycle verification"
+        }
+      ],
+      "obituary": {
+        "id": "b79cdb36e632c3a8",
+        "death_id": "4aab24fe9f626cc6",
+        "summary": "Archive of a deleted TypeScript file, `src/lib/legacy_prototype.ts`, which was removed due to its age and potential obsolescence within the codebase.",
+        "cause": "abandoned_experiment",
+        "confidence": 0.95,
+        "cites": [
+          "dc83d4fbb75f34771685923c37655143c48437f4",
+          "a4ca569dccfde708a684338f3c8637b690328184"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:38:45.276Z"
+      },
+      "hauntingCount": 2
+    },
+    {
+      "id": "3b196a1441d32aa0",
+      "repo_id": "eefb118c468c369e",
+      "path": "src/lib/old_telemetry.ts",
+      "born_sha": "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d",
+      "born_date": "2026-10-30T13:32:59.000Z",
+      "died_sha": "dc83d4fbb75f34771685923c37655143c48437f4",
+      "died_date": "2026-10-30T13:33:08.000Z",
+      "lifespan_days": 0,
+      "last_words": "refactor: purge deprecated legacy prototype, old telemetry, and temporary config modules (#12)",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 2
+      },
+      "authors": [
+        "Shreyansh00987"
+      ],
+      "first_version_snippet": "// Deprecated telemetry stub\nexport const TELEMETRY_STUB_DISABLED = true;\n",
+      "final_diff": "diff --git a/src/lib/old_telemetry.ts b/src/lib/old_telemetry.ts\ndeleted file mode 100644\nindex ea39843..0000000\n--- a/src/lib/old_telemetry.ts\n+++ /dev/null\n@@ -1,2 +0,0 @@\n-// Deprecated telemetry stub\n-export const TELEMETRY_STUB_DISABLED = true;\n",
+      "commit_history": [
+        {
+          "sha": "dc83d4fbb75f34771685923c37655143c48437f4",
+          "shortSha": "dc83d4f",
+          "author": "Shreyansh00987",
+          "date": "2026-10-30T13:33:08.000Z",
+          "message": "refactor: purge deprecated legacy prototype, old telemetry, and temporary config modules (#12)"
+        },
+        {
+          "sha": "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d",
+          "shortSha": "99dad80",
+          "author": "Shreyansh00987",
+          "date": "2026-10-30T13:32:59.000Z",
+          "message": "chore(config): add temporary telemetry and alpha config modules"
+        }
+      ],
+      "obituary": {
+        "id": "a10d7f828639e576",
+        "death_id": "3b196a1441d32aa0",
+        "summary": "Archive of a deleted TypeScript file, `src/lib/old_telemetry.ts`.",
+        "cause": "abandoned_experiment",
+        "confidence": 0.95,
+        "cites": [
+          "dc83d4fbb75f34771685923c37655143c48437f4",
+          "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:38:47.001Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "93e307bce79f15b0",
+      "repo_id": "eefb118c468c369e",
+      "path": "src/lib/temp_config.json",
+      "born_sha": "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d",
+      "born_date": "2026-10-30T13:32:59.000Z",
+      "died_sha": "dc83d4fbb75f34771685923c37655143c48437f4",
+      "died_date": "2026-10-30T13:33:08.000Z",
+      "lifespan_days": 0,
+      "last_words": "refactor: purge deprecated legacy prototype, old telemetry, and temporary config modules (#12)",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 4
+      },
+      "authors": [
+        "Shreyansh00987"
+      ],
+      "first_version_snippet": "{\n  \"deprecatedConfig\": true,\n  \"legacyChannel\": \"alpha-test\"\n}\n",
+      "final_diff": "diff --git a/src/lib/temp_config.json b/src/lib/temp_config.json\ndeleted file mode 100644\nindex 570f07c..0000000\n--- a/src/lib/temp_config.json\n+++ /dev/null\n@@ -1,4 +0,0 @@\n-{\n-  \"deprecatedConfig\": true,\n-  \"legacyChannel\": \"alpha-test\"\n-}\n",
+      "commit_history": [
+        {
+          "sha": "dc83d4fbb75f34771685923c37655143c48437f4",
+          "shortSha": "dc83d4f",
+          "author": "Shreyansh00987",
+          "date": "2026-10-30T13:33:08.000Z",
+          "message": "refactor: purge deprecated legacy prototype, old telemetry, and temporary config modules (#12)"
+        },
+        {
+          "sha": "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d",
+          "shortSha": "99dad80",
+          "author": "Shreyansh00987",
+          "date": "2026-10-30T13:32:59.000Z",
+          "message": "chore(config): add temporary telemetry and alpha config modules"
+        }
+      ],
+      "obituary": {
+        "id": "9f0935af8203fad8",
+        "death_id": "93e307bce79f15b0",
+        "summary": "The `src/lib/temp_config.json` file was deleted as part of a refactor focused on streamlining configuration management. The deletion was triggered by a commit message indicating a purge of deprecated legacy prototype, old telemetry, and temporary config modules, likely to improve maintainability and reduce code complexity.",
+        "cause": "refactor",
+        "confidence": 0.95,
+        "cites": [
+          "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:38:48.800Z"
+      },
+      "hauntingCount": 0
+    }
+  ],
+  "hauntings": [
+    {
+      "id": "c3f90d3c01e53027",
+      "repo_id": "eefb118c468c369e",
+      "death_id": "4aab24fe9f626cc6",
+      "dead_path": "src/lib/legacy_prototype.ts",
+      "dead_symbol": "legacy_prototype.ts",
+      "file": "src/lib/survivor_docs.md",
+      "line": 4,
+      "snippet": "Active documentation still remembers legacy_prototype.ts.",
+      "reason": "Surviving link or reference in active documentation \"src/lib/survivor_docs.md\"",
+      "confidence": 0.95
+    },
+    {
+      "id": "731d4ba9625c1324",
+      "repo_id": "eefb118c468c369e",
+      "death_id": "4aab24fe9f626cc6",
+      "dead_path": "src/lib/legacy_prototype.ts",
+      "dead_symbol": "deprecatedArtifactMarker",
+      "file": "src/lib/survivor_docs.md",
+      "line": 3,
+      "snippet": "When referencing legacy components, note that deprecatedArtifactMarker was retired in commit dc83d4f.",
+      "reason": "References symbol \"deprecatedArtifactMarker\" defined in deleted src/lib/legacy_prototype.ts",
+      "confidence": 0.65
+    }
+  ],
+  "exorcisms": [
+    {
+      "haunting_id": "c3f90d3c01e53027",
+      "diff": {
+        "death_id": "4aab24fe9f626cc6",
+        "target_file": "src/lib/survivor_docs.md",
+        "diff": "--- a/src/lib/survivor_docs.md\n+++ b/src/lib/survivor_docs.md\n@@ -1,5 +1,4 @@\n # Architectural Notes\n \n When referencing legacy components, note that deprecatedArtifactMarker was retired in commit dc83d4f.\n-Active documentation still remembers legacy_prototype.ts.\n ",
+        "original_line": 4,
+        "dead_reference": "legacy_prototype.ts"
+      }
+    },
+    {
+      "haunting_id": "731d4ba9625c1324",
+      "diff": {
+        "death_id": "4aab24fe9f626cc6",
+        "target_file": "src/lib/survivor_docs.md",
+        "diff": "--- a/src/lib/survivor_docs.md\n+++ b/src/lib/survivor_docs.md\n@@ -1,5 +1,4 @@\n # Architectural Notes\n \n-When referencing legacy components, note that deprecatedArtifactMarker was retired in commit dc83d4f.\n Active documentation still remembers legacy_prototype.ts.\n ",
+        "original_line": 3,
+        "dead_reference": "deprecatedArtifactMarker"
+      }
+    }
+  ]
+}

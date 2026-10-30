@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import fs from "node:fs";
+import path from "node:path";
 import { getDatabase, dbOps } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
@@ -17,6 +19,15 @@ export async function GET(req: NextRequest) {
   }
 
   if (!targetRepoId) {
+    const samplePath = path.join(process.cwd(), "samples", "wake.json");
+    if (fs.existsSync(samplePath)) {
+      try {
+        const sampleData = JSON.parse(fs.readFileSync(samplePath, "utf8"));
+        return NextResponse.json({ hauntings: sampleData.hauntings || [] });
+      } catch {
+        // Fall through
+      }
+    }
     return NextResponse.json({ hauntings: [] });
   }
 

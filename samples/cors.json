@@ -1,0 +1,817 @@
+{
+  "exported_at": "2026-10-30T13:39:11.489Z",
+  "generator": "Wake Precomputed Sample Exporter",
+  "model": "gemma3:1b",
+  "repo": {
+    "id": "6a88eb3a416902f4",
+    "name": "expressjs/cors",
+    "path": "D:\\Project\\Wake\\fixtures\\cors",
+    "last_scanned_at": "2026-10-30T13:39:11.489Z",
+    "death_count": 9,
+    "haunting_count": 0
+  },
+  "deaths": [
+    {
+      "id": "f5f2fafbd959551e",
+      "repo_id": "6a88eb3a416902f4",
+      "path": "CONTRIBUTING.md",
+      "born_sha": "9f0e4218d29ee3f43837b45c5e7af503a75687ff",
+      "born_date": "2013-04-28T16:20:22.000Z",
+      "died_sha": "7e6f7eeac0c16d9abed2cb84ac4b2891a51fa3dc",
+      "died_date": "2025-11-30T16:06:15.000Z",
+      "lifespan_days": 4599,
+      "last_words": "docs: revamp content (#374)",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 33
+      },
+      "authors": [
+        "Efe",
+        "Douglas Christopher Wilson",
+        "Troy Goode"
+      ],
+      "first_version_snippet": "# contributing to `cors`\n\nCORS is a node.js package for providing a [connect](http://www.senchalabs.org/connect/)/[express](http://expressjs.com/) middleware that can be used to enable [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) with various options. Learn more about the project in [the README](README.md).\n\n[![build status](https://secure.travis-ci.org/TroyGoode/node-cors.png)](http://travis-ci.org/TroyGoode/node-cors)\n\n## The CORS Spec\n\n[http://www.w3.org/TR/cors/](http://www.w3.org/TR/cors/)\n\n## Pull Requests Welcome\n\n* Include `'use strict';` in every javascript file.\n* 2 space indentation.\n* Please run the testing steps below before submitting.\n\n## Testing\n\n```bash\n$ npm install\n$ npm test\n$ npm run lint\n```\n\n## License\n\n[MIT License](http://www.opensource.org/licenses/mit-license.php)\n",
+      "final_diff": "diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md\ndeleted file mode 100644\nindex 591b09a..0000000\n--- a/CONTRIBUTING.md\n+++ /dev/null\n@@ -1,33 +0,0 @@\n-# contributing to `cors`\n-\n-CORS is a node.js package for providing a [connect](http://www.senchalabs.org/connect/)/[express](http://expressjs.com/) middleware that can be used to enable [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) with various options. Learn more about the project in [the README](README.md).\n-\n-## The CORS Spec\n-\n-[http://www.w3.org/TR/cors/](http://www.w3.org/TR/cors/)\n-\n-## Pull Requests Welcome\n-\n-* Include `'use strict';` in every javascript file.\n-* 2 space indentation.\n-* Please run the testing steps below before submitting.\n-\n-## Testing\n-\n-```bash\n-$ npm install\n-$ npm test\n-```\n-\n-## Interactive Testing Harness\n-\n-[http://node-cors-client.herokuapp.com](http://node-cors-client.herokuapp.com)\n-\n-Related git repositories:\n-\n-* [https://github.com/TroyGoode/node-cors-server](https://github.com/TroyGoode/node-cors-server)\n-* [https://github.com/TroyGoode/node-cors-client](https://github.com/TroyGoode/node-cors-client)\n-\n-## License\n-\n-[MIT License](http://www.opensource.org/licenses/mit-license.php)\n",
+      "commit_history": [
+        {
+          "sha": "7e6f7eeac0c16d9abed2cb84ac4b2891a51fa3dc",
+          "shortSha": "7e6f7ee",
+          "author": "Efe",
+          "date": "2025-11-30T16:06:15.000Z",
+          "message": "docs: revamp content (#374)"
+        },
+        {
+          "sha": "4868d5215c2fbff6a6e16f7059a5c47ce0493c50",
+          "shortSha": "4868d52",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-03-26T04:18:04.000Z",
+          "message": "docs: remove old badge from contributing"
+        },
+        {
+          "sha": "8ec22a9b86f71389264cd961f567e72cf7db83ca",
+          "shortSha": "8ec22a9",
+          "author": "Troy Goode",
+          "date": "2015-05-28T23:02:42.000Z",
+          "message": "#42: now passing all tests again"
+        },
+        {
+          "sha": "8a00e70f9b2ba614581feff57fe1e92ef72836c1",
+          "shortSha": "8a00e70",
+          "author": "Troy Goode",
+          "date": "2013-04-28T18:34:42.000Z",
+          "message": "bump to v1"
+        },
+        {
+          "sha": "9f0e4218d29ee3f43837b45c5e7af503a75687ff",
+          "shortSha": "9f0e421",
+          "author": "Troy Goode",
+          "date": "2013-04-28T16:20:22.000Z",
+          "message": "fix for #2"
+        }
+      ],
+      "obituary": {
+        "id": "d15828a723d8d1e8",
+        "death_id": "f5f2fafbd959551e",
+        "summary": "A critical security vulnerability in the `cors` middleware was identified and addressed, preventing potential cross-origin attacks.",
+        "cause": "abandoned_experiment",
+        "confidence": 0.95,
+        "cites": [
+          "7e6f7eeac0c16d9abed2cb84ac4b2891a51fa3dc"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:38:55.931Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "6a665c09d1de231e",
+      "repo_id": "6a88eb3a416902f4",
+      "path": ".travis.yml",
+      "born_sha": "bcd03d9a8d91f9e5d985e2955ec418921c10f546",
+      "born_date": "2013-01-31T03:28:05.000Z",
+      "died_sha": "7660d3e539301dffdd613b506ab5f07403e15c0b",
+      "died_date": "2020-11-06T02:08:52.000Z",
+      "lifespan_days": 2836,
+      "last_words": "build: use GitHub Actions instead of Travis CI",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 98
+      },
+      "authors": [
+        "Douglas Christopher Wilson",
+        "sandip mondal"
+      ],
+      "first_version_snippet": "language: node_js\nnode_js:\n  - 0.8\n",
+      "final_diff": "diff --git a/.travis.yml b/.travis.yml\ndeleted file mode 100644\nindex cc3b2a5..0000000\n--- a/.travis.yml\n+++ /dev/null\n@@ -1,98 +0,0 @@\n-language: node_js\n-node_js:\n-  - \"0.10\"\n-  - \"4.9\"\n-  - \"6.17\"\n-  - \"8.17\"\n-  - \"10.22\"\n-  - \"12.19\"\n-  - \"14.12\"\n-cache:\n-  directories:\n-    - node_modules\n-before_install:\n-  - |\n-    # Setup utility functions\n-    function node_version_lt () {\n-      [[ \"$(v \"$TRAVIS_NODE_VERSION\")\" -lt \"$(v \"${1}\")\" ]]\n-    }\n-    function npm_module_installed () {\n-      npm -lsp ls | grep -Fq \"$(pwd)/node_modules/${1}:${1}@\"\n-    }\n-    function npm_remove_module_re () {\n-      node -e '\n-        fs = require(\"fs\");\n-        p = JSON.parse(fs.readFileSync(\"package.json\", \"utf8\"));\n-        r = RegExp(process.argv[1]);\n-        for (k in p.devDependencies) {\n-          if (r.test(k)) delete p.devDependencies[k];\n-        }\n-        fs.writeFileSync(\"package.json\", JSON.stringify(p, null, 2) + \"\\n\");\n-      ' \"$@\"\n-    }\n-    function npm_use_module () {\n-      node -e '\n-        fs = require(\"fs\");\n-        p = JSON.parse(fs.readFileSync(\"package.json\", \"utf8\"));\n-        p.devDependencies[process.argv[1]] = process.argv[2];\n-        fs.writeFileSync(\"package.json\", JSON.stringify(p, null, 2) + \"\\n\");\n-      ' \"$@\"\n-    }\n-    function v () {\n-      tr '.' '\\n' <<< \"${1}\" \\\n-        | awk '{ printf \"%03d\", $0 }' \\\n-        | sed 's/^0*//'\n-    }\n-  # Configure npm\n-  - |\n-    # Skip updating shrinkwrap / lock\n-    npm config set shrinkwrap false\n-  # Setup Node.js version-specific dependencies\n-  - |\n-    # Configure eslint for linting\n-    if node_version_lt '10.12'; then npm_remove_module_re '^eslint(-|$)'\n-    fi\n-  - |\n-    # Configure mocha for testing\n-    if   node_version_lt '4.0' ; then npm_use_module 'mocha' '3.5.3'\n-    elif node_version_lt '6.0' ; then npm_use_module 'mocha' '5.2.0'\n-    elif node_version_lt '8.0' ; then npm_use_module 'mocha' '6.2.2'\n-    elif node_version_lt '10.0'; then npm_use_module 'mocha' '7.2.0'\n-    fi\n-  - |\n-    # Configure nyc for testing\n-    if   node_version_lt '4.0'; then npm_use_module 'nyc' '10.3.2'\n-    elif node_version_lt '6.0'; then npm_use_module 'nyc' '11.9.0'\n-    elif node_version_lt '8.0'; then npm_use_module 'nyc' '14.1.1'\n-    fi\n-  - |\n-    # Configure supertest for http calls\n-    if   node_version_lt '4.0'; then npm_use_module 'supertest' '2.0.0'\n-    elif node_version_lt '6.0'; then npm_use_module 'supertest' '3.4.2'\n-    fi\n-  # Update Node.js modules\n-  - |\n-    # Prune & rebuild node_modules\n-    if [[ -d node_modules ]]; then\n-      npm prune\n-      npm rebuild\n-    fi\n-before_script:\n-  - |\n-    # Contents of node_modules\n-    npm -s ls ||:\n-script:\n-  - |\n-    # Run test script\n-    npm run test-ci\n-  - |\n-    # Run linting, if eslint exists\n-    if npm_module_installed 'eslint'; then npm run-script lint\n-    fi\n-after_script:\n-  - |\n-    # Upload coverage to coveralls if exists\n-    if [[ -d .nyc_output ]]; then\n-      npm install --save-dev coveralls@2\n-      nyc report --reporter=text-lcov | coveralls\n-    fi\n",
+      "commit_history": [
+        {
+          "sha": "7660d3e539301dffdd613b506ab5f07403e15c0b",
+          "shortSha": "7660d3e",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-11-06T02:08:52.000Z",
+          "message": "build: use GitHub Actions instead of Travis CI"
+        },
+        {
+          "sha": "4069e5eeff1783d153dc386da1c9cbd836f1c344",
+          "shortSha": "4069e5e",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-10-08T03:41:12.000Z",
+          "message": "build: Node.js@12.19"
+        },
+        {
+          "sha": "9c6f105d5fa900aa93a7d7479398fdd1ceb212cc",
+          "shortSha": "9c6f105",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-09-23T04:10:16.000Z",
+          "message": "build: Node.js@14.12"
+        },
+        {
+          "sha": "76df2e6982af8821e98890ec965f4ee4da21b95c",
+          "shortSha": "76df2e6",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-08-31T01:00:06.000Z",
+          "message": "build: mocha@8.1.3"
+        },
+        {
+          "sha": "94c6e25bcacac2776241c9903e3c7295bbb5bcb1",
+          "shortSha": "94c6e25",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-08-31T00:59:02.000Z",
+          "message": "build: Node.js@14.9"
+        },
+        {
+          "sha": "51add64df97ffe75493a76dffc7fbb5b1951115f",
+          "shortSha": "51add64",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-07-30T04:18:09.000Z",
+          "message": "build: eslint@7.5.0"
+        },
+        {
+          "sha": "ab908c78a2fea6d70b43bc33b528fab71b5f105b",
+          "shortSha": "ab908c7",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-07-30T02:44:53.000Z",
+          "message": "build: Node.js@14.5"
+        },
+        {
+          "sha": "ed34fb6ab0760e7016b52be94ef722105158b364",
+          "shortSha": "ed34fb6",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-07-30T02:41:29.000Z",
+          "message": "build: Node.js@10.22"
+        },
+        {
+          "sha": "33ef0ecfebf4864ffbd2157b85e7106e10c9b6e8",
+          "shortSha": "33ef0ec",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-06-08T04:36:37.000Z",
+          "message": "build: Node.js@14.4"
+        },
+        {
+          "sha": "f6e95147124689ab63f5e9cbf03ab989c8bb6673",
+          "shortSha": "f6e9514",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-06-08T04:32:04.000Z",
+          "message": "build: Node.js@12.18"
+        },
+        {
+          "sha": "883c1f9bc691e093d55e131f356e4eda8c2a3564",
+          "shortSha": "883c1f9",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-06-07T23:22:07.000Z",
+          "message": "build: Node.js@10.21"
+        },
+        {
+          "sha": "e03e9ee89de73627c0dec1707d7e74f119b3da30",
+          "shortSha": "e03e9ee",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-05-07T00:08:22.000Z",
+          "message": "build: Node.js@14.2"
+        },
+        {
+          "sha": "943ad3ca70902bd2ed316c47165b62dc624df8a3",
+          "shortSha": "943ad3c",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-04-23T01:20:21.000Z",
+          "message": "build: support Node.js 14.x"
+        },
+        {
+          "sha": "c2c78dd8011e691f42e8fcde7de4f5b93759321c",
+          "shortSha": "c2c78dd",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-04-23T01:20:03.000Z",
+          "message": "build: Node.js@10.20"
+        },
+        {
+          "sha": "a8d7458dd98ba9e8f84607a4c7a68836e54d1e56",
+          "shortSha": "a8d7458",
+          "author": "sandip mondal",
+          "date": "2020-04-20T12:11:29.000Z",
+          "message": "build: support Node.js 12.x"
+        },
+        {
+          "sha": "14dab65eaa5b06e764e953cffd2f36ab0bd6a0df",
+          "shortSha": "14dab65",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-03-17T02:09:10.000Z",
+          "message": "build: Node.js@10.19"
+        },
+        {
+          "sha": "1ef7f91c2772d60e3d95c9057493c0cef38db184",
+          "shortSha": "1ef7f91",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-03-17T02:05:41.000Z",
+          "message": "build: fix typo in Travis CI directive"
+        },
+        {
+          "sha": "1b13e0b14bc5bd12f7fef2a4399bfb0e8fcbd9df",
+          "shortSha": "1b13e0b",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-03-17T01:59:14.000Z",
+          "message": "build: remove deprecated Travis CI directive"
+        },
+        {
+          "sha": "d50681825b08651165bc9765284f6f9488d6dbe4",
+          "shortSha": "d506818",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-03-10T02:04:59.000Z",
+          "message": "build: mocha@7.1.0"
+        },
+        {
+          "sha": "7386dfdc35ec5d7a0c3bbbbe5d488e1c140321b8",
+          "shortSha": "7386dfd",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-01-04T01:13:20.000Z",
+          "message": "build: Node.js@10.18"
+        },
+        {
+          "sha": "6ed272d822d2050e765672a493f5cd2de2c71c76",
+          "shortSha": "6ed272d",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-01-04T01:09:56.000Z",
+          "message": "build: Node.js@8.17"
+        },
+        {
+          "sha": "467e71ad762c067c13bc4bb3f47b35575dcf2f2b",
+          "shortSha": "467e71a",
+          "author": "Douglas Christopher Wilson",
+          "date": "2020-01-04T01:03:12.000Z",
+          "message": "build: nyc@15.0.0"
+        },
+        {
+          "sha": "acd78e318af5174afbd160529ee021e586edb9cd",
+          "shortSha": "acd78e3",
+          "author": "Douglas Christopher Wilson",
+          "date": "2019-12-27T02:07:19.000Z",
+          "message": "build: eslint@6.8.0"
+        },
+        {
+          "sha": "8e5dd1a2dba50d01d8e06f9f313c15e5594f1fe2",
+          "shortSha": "8e5dd1a",
+          "author": "Douglas Christopher Wilson",
+          "date": "2019-11-16T06:20:44.000Z",
+          "message": "build: Node.js@10.17"
+        },
+        {
+          "sha": "244c547da3a46b2fcbf7ad0986b45600f09f82b3",
+          "shortSha": "244c547",
+          "author": "Douglas Christopher Wilson",
+          "date": "2019-06-23T00:51:25.000Z",
+          "message": "build: eslint@5.16.0"
+        }
+      ],
+      "obituary": {
+        "id": "270583c92be10c51",
+        "death_id": "6a665c09d1de231e",
+        "summary": "The .travis.yml file was deleted due to a change in the project's build process, transitioning from using Travis CI to GitHub Actions.",
+        "cause": "abandoned_experiment",
+        "confidence": 0.95,
+        "cites": [
+          "7660d3e539301dffdd613b506ab5f07403e15c0b"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:38:57.649Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "ed8ca017ba74836e",
+      "repo_id": "6a88eb3a416902f4",
+      "path": "test/mocha.opts",
+      "born_sha": "bcd03d9a8d91f9e5d985e2955ec418921c10f546",
+      "born_date": "2013-01-31T03:28:05.000Z",
+      "died_sha": "f45d53395958bea5580c2fd08a83a2cd5058fc64",
+      "died_date": "2018-09-30T21:49:02.000Z",
+      "lifespan_days": 2069,
+      "last_words": "tests: remove mocha.opts file",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 3
+      },
+      "authors": [
+        "Douglas Christopher Wilson",
+        "Troy Goode"
+      ],
+      "first_version_snippet": "--ui bdd\n--reporter spec\n--require should\n",
+      "final_diff": "diff --git a/test/mocha.opts b/test/mocha.opts\ndeleted file mode 100644\nindex 42b5888..0000000\n--- a/test/mocha.opts\n+++ /dev/null\n@@ -1,3 +0,0 @@\n---ui bdd\n---reporter spec\n---require test/support/env\n",
+      "commit_history": [
+        {
+          "sha": "f45d53395958bea5580c2fd08a83a2cd5058fc64",
+          "shortSha": "f45d533",
+          "author": "Douglas Christopher Wilson",
+          "date": "2018-09-30T21:49:02.000Z",
+          "message": "tests: remove mocha.opts file"
+        },
+        {
+          "sha": "98f2ef4b7d24bd5b83272c7c275271c808fc4cb2",
+          "shortSha": "98f2ef4",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-10-05T00:30:11.000Z",
+          "message": "tests: replace should with assert"
+        },
+        {
+          "sha": "5ddd7fed5430ec6b953dc56203864558bdc8f45f",
+          "shortSha": "5ddd7fe",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-03-26T04:40:48.000Z",
+          "message": "tests: set express to test mode for tests"
+        },
+        {
+          "sha": "bcd03d9a8d91f9e5d985e2955ec418921c10f546",
+          "shortSha": "bcd03d9",
+          "author": "Troy Goode",
+          "date": "2013-01-31T03:28:05.000Z",
+          "message": "first commit"
+        }
+      ],
+      "obituary": {
+        "id": "obit-template-ed8ca017ba74836e",
+        "death_id": "ed8ca017ba74836e",
+        "summary": "Removed test/mocha.opts after 2069 days. Final commit f45d533 by Douglas Christopher Wilson: \"tests: remove mocha.opts file\". Purged 3 lines of historical code.",
+        "cause": "refactor",
+        "confidence": 1,
+        "cites": [
+          "f45d53395958bea5580c2fd08a83a2cd5058fc64"
+        ],
+        "is_template": true,
+        "created_at": "2026-10-30T13:38:59.392Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "3f926dd493725690",
+      "repo_id": "6a88eb3a416902f4",
+      "path": ".eslintrc",
+      "born_sha": "fcd2b56ac3fca05b05ca6f6b39fd0dc2587ec76b",
+      "born_date": "2015-05-28T22:35:32.000Z",
+      "died_sha": "00d6eec1049054676b00beed13453e1d556af93b",
+      "died_date": "2018-09-30T21:38:20.000Z",
+      "lifespan_days": 1221,
+      "last_words": "build: use yaml eslint configuration",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 10
+      },
+      "authors": [
+        "Douglas Christopher Wilson",
+        "Troy Goode"
+      ],
+      "first_version_snippet": "{\n  \"env\": {\n    \"node\": true\n  },\n  \"rules\": {\n    \"indent\": [2, 2],\n    \"quotes\": \"single\"\n  }\n}\n",
+      "final_diff": "diff --git a/.eslintrc b/.eslintrc\ndeleted file mode 100644\nindex aa5788d..0000000\n--- a/.eslintrc\n+++ /dev/null\n@@ -1,10 +0,0 @@\n-{\n-  \"env\": {\n-    \"node\": true\n-  },\n-  \"rules\": {\n-    \"indent\": [\"error\", 2, { \"SwitchCase\": 1 }],\n-    \"quotes\": [\"error\", \"single\"],\n-    \"space-in-parens\": [\"error\", \"never\"]\n-  }\n-}\n",
+      "commit_history": [
+        {
+          "sha": "00d6eec1049054676b00beed13453e1d556af93b",
+          "shortSha": "00d6eec",
+          "author": "Douglas Christopher Wilson",
+          "date": "2018-09-30T21:38:20.000Z",
+          "message": "build: use yaml eslint configuration"
+        },
+        {
+          "sha": "53405aaa76d6cb29d0a04d86ec4a6e2c71c4b38d",
+          "shortSha": "53405aa",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-10-04T19:59:07.000Z",
+          "message": "lint: fix parens spacing"
+        },
+        {
+          "sha": "00ce63a3fda7794c0e0e148fe4b9093bd75c811d",
+          "shortSha": "00ce63a",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-07-13T03:52:30.000Z",
+          "message": "build: eslint@2.13.1"
+        },
+        {
+          "sha": "fcd2b56ac3fca05b05ca6f6b39fd0dc2587ec76b",
+          "shortSha": "fcd2b56",
+          "author": "Troy Goode",
+          "date": "2015-05-28T22:35:32.000Z",
+          "message": "issue #42: (WIP) switch to ESLint; clean up"
+        }
+      ],
+      "obituary": {
+        "id": "a8ff00173c7f4352",
+        "death_id": "3f926dd493725690",
+        "summary": "The .eslintrc file, a configuration file for ESLint, was deleted as part of a planned cleanup of the repository, likely due to a change in project priorities or a reassessment of its functionality.",
+        "cause": "abandoned_experiment",
+        "confidence": 0.95,
+        "cites": [
+          "00d6eec1049054676b00beed13453e1d556af93b"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:39:01.071Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "cfd6d041d743470d",
+      "repo_id": "6a88eb3a416902f4",
+      "path": "test/.eslintrc",
+      "born_sha": "00ce63a3fda7794c0e0e148fe4b9093bd75c811d",
+      "born_date": "2017-07-13T03:52:30.000Z",
+      "died_sha": "00d6eec1049054676b00beed13453e1d556af93b",
+      "died_date": "2018-09-30T21:38:20.000Z",
+      "lifespan_days": 445,
+      "last_words": "build: use yaml eslint configuration",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 5
+      },
+      "authors": [
+        "Douglas Christopher Wilson"
+      ],
+      "first_version_snippet": "{\n  \"env\": {\n    \"mocha\": true\n  }\n}\n",
+      "final_diff": "diff --git a/test/.eslintrc b/test/.eslintrc\ndeleted file mode 100644\nindex 7eeefc3..0000000\n--- a/test/.eslintrc\n+++ /dev/null\n@@ -1,5 +0,0 @@\n-{\n-  \"env\": {\n-    \"mocha\": true\n-  }\n-}\n",
+      "commit_history": [
+        {
+          "sha": "00d6eec1049054676b00beed13453e1d556af93b",
+          "shortSha": "00d6eec",
+          "author": "Douglas Christopher Wilson",
+          "date": "2018-09-30T21:38:20.000Z",
+          "message": "build: use yaml eslint configuration"
+        },
+        {
+          "sha": "00ce63a3fda7794c0e0e148fe4b9093bd75c811d",
+          "shortSha": "00ce63a",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-07-13T03:52:30.000Z",
+          "message": "build: eslint@2.13.1"
+        }
+      ],
+      "obituary": {
+        "id": "17bb1f41941e11af",
+        "death_id": "cfd6d041d743470d",
+        "summary": "The file `test/.eslintrc` was deleted due to a planned refactoring of the configuration, specifically a change to the `mocha` environment variable. The deletion was initiated by Douglas Christopher Wilson during a build process involving ESLint configuration.",
+        "cause": "refactor",
+        "confidence": 0.95,
+        "cites": [
+          "00d6eec1049054676b00beed13453e1d556af93b"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:39:02.541Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "306c6c54ce10c64c",
+      "repo_id": "6a88eb3a416902f4",
+      "path": "test/issue-31.js",
+      "born_sha": "aaa1a4ed102ab3c91fe6b5ff5a0a07733e276fff",
+      "born_date": "2014-11-01T19:11:31.000Z",
+      "died_sha": "c4f5092dcd13bbcd4c83bc7df8a315903d3e5c43",
+      "died_date": "2017-10-04T02:20:24.000Z",
+      "lifespan_days": 1067,
+      "last_words": "tests: remove unnecessary test",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 57
+      },
+      "authors": [
+        "Douglas Christopher Wilson",
+        "Troy Goode"
+      ],
+      "first_version_snippet": "/*jslint indent: 2*/\n/*global require: true, module: true, describe: true, it: true*/\n\n(function () {\n\n  'use strict';\n\n  var should = require('should'),\n    express = require('express'),\n    supertest = require('supertest'),\n    cors = require('../lib'),\n    app,\n    mainRouter,\n    itemsRouter;\n\n  /* -------------------------------------------------------------------------- */\n\n  itemsRouter = express.Router();\n  itemsRouter.get('/', function (req, res) {\n    res.send('hello world');\n  });\n\n  mainRouter = express.Router();\n  mainRouter.use('/items', itemsRouter);\n\n  app = express();\n  app.use(cors());\n  app.use(mainRouter);\n\n  /* -------------------------------------------------------------------------- */\n\n  describe('issue  #31', function () {\n    it('OPTIONS works', function (done) {\n      supertest(app)\n        .options('/items')\n        .expect(204)\n        .set('Origin', 'http://example.com')\n        .end(function (err, res) {\n          should.not.exist(err);\n          res.headers['access-control-allow-origin'].should.eql('*');\n          done();\n        });\n    });\n\n    it('GET works', function (done) {\n      supertest(app)\n        .get('/items')\n        .expect(200)\n        .set('Origin', 'http://example.com')\n        .end(function (err, res) {\n          should.not.exist(err);\n          res.headers['access-control-allow-origin'].should.eql('*');\n          res.text.should.eql('hello world');\n          done();\n        });\n    });\n  });\n\n}());\n\n",
+      "final_diff": "diff --git a/test/issue-31.js b/test/issue-31.js\ndeleted file mode 100644\nindex 578033b..0000000\n--- a/test/issue-31.js\n+++ /dev/null\n@@ -1,57 +0,0 @@\n-(function () {\n-\n-  'use strict';\n-\n-  var should = require('should'),\n-    express = require('express'),\n-    supertest = require('supertest'),\n-    cors = require('../lib');\n-\n-  var app,\n-    mainRouter,\n-    itemsRouter;\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  itemsRouter = new express.Router();\n-  itemsRouter.get('/', function (req, res) {\n-    res.send('hello world');\n-  });\n-\n-  mainRouter = new express.Router();\n-  mainRouter.use('/items', itemsRouter);\n-\n-  app = express();\n-  app.use(cors());\n-  app.use(mainRouter);\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  describe('issue  #31', function () {\n-    it('OPTIONS works', function (done) {\n-      supertest(app)\n-        .options('/items')\n-        .expect(204)\n-        .set('Origin', 'http://example.com')\n-        .end(function (err, res) {\n-          should.not.exist(err);\n-          res.headers['access-control-allow-origin'].should.eql('*');\n-          done();\n-        });\n-    });\n-\n-    it('GET works', function (done) {\n-      supertest(app)\n-        .get('/items')\n-        .expect(200)\n-        .set('Origin', 'http://example.com')\n-        .end(function (err, res) {\n-          should.not.exist(err);\n-          res.headers['access-control-allow-origin'].should.eql('*');\n-          res.text.should.eql('hello world');\n-          done();\n-        });\n-    });\n-  });\n-\n-}());\n",
+      "commit_history": [
+        {
+          "sha": "c4f5092dcd13bbcd4c83bc7df8a315903d3e5c43",
+          "shortSha": "c4f5092",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-10-04T02:20:24.000Z",
+          "message": "tests: remove unnecessary test"
+        },
+        {
+          "sha": "00ce63a3fda7794c0e0e148fe4b9093bd75c811d",
+          "shortSha": "00ce63a",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-07-13T03:52:30.000Z",
+          "message": "build: eslint@2.13.1"
+        },
+        {
+          "sha": "fcd2b56ac3fca05b05ca6f6b39fd0dc2587ec76b",
+          "shortSha": "fcd2b56",
+          "author": "Troy Goode",
+          "date": "2015-05-28T22:35:32.000Z",
+          "message": "issue #42: (WIP) switch to ESLint; clean up"
+        },
+        {
+          "sha": "aaa1a4ed102ab3c91fe6b5ff5a0a07733e276fff",
+          "shortSha": "aaa1a4e",
+          "author": "Troy Goode",
+          "date": "2014-11-01T19:11:31.000Z",
+          "message": "#31: reproduction attempt"
+        },
+        {
+          "sha": "3a39e990146c0ad3931041cd3256cc597d7b907d",
+          "shortSha": "3a39e99",
+          "author": "Troy Goode",
+          "date": "2013-10-10T01:41:52.000Z",
+          "message": "lint"
+        },
+        {
+          "sha": "555f1805ea51e67989f66737f20450e88cba2c02",
+          "shortSha": "555f180",
+          "author": "Troy Goode",
+          "date": "2013-10-10T01:20:57.000Z",
+          "message": "jslint"
+        },
+        {
+          "sha": "4f13c630b23320dfe888008315fc493874e8b920",
+          "shortSha": "4f13c63",
+          "author": "Troy Goode",
+          "date": "2013-10-10T00:49:43.000Z",
+          "message": "wrapping up"
+        },
+        {
+          "sha": "a821a395c16958584bb0a4ab890fa0de8bdc2a21",
+          "shortSha": "a821a39",
+          "author": "Troy Goode",
+          "date": "2013-10-10T00:36:04.000Z",
+          "message": "WIP"
+        },
+        {
+          "sha": "dec52dec13572f03ae4abfba7ba2c027c78bee73",
+          "shortSha": "dec52de",
+          "author": "Troy Goode",
+          "date": "2013-04-28T16:27:43.000Z",
+          "message": "tweak and bump to 0.1.1"
+        },
+        {
+          "sha": "9f0e4218d29ee3f43837b45c5e7af503a75687ff",
+          "shortSha": "9f0e421",
+          "author": "Troy Goode",
+          "date": "2013-04-28T16:20:22.000Z",
+          "message": "fix for #2"
+        },
+        {
+          "sha": "653272dfab73676b02e0179e11bcd2b83b777542",
+          "shortSha": "653272d",
+          "author": "Troy Goode",
+          "date": "2013-04-28T15:52:35.000Z",
+          "message": "don't rely on global installation of mocha"
+        },
+        {
+          "sha": "de1b95e237013ee4e49824989a38c2444e0101e6",
+          "shortSha": "de1b95e",
+          "author": "Troy Goode",
+          "date": "2013-04-28T15:51:06.000Z",
+          "message": "issue #2 seems to work fine"
+        },
+        {
+          "sha": "b2c49ca7bc3ef1a91b14b4c9c0a2283a1531e174",
+          "shortSha": "b2c49ca",
+          "author": "Troy Goode",
+          "date": "2013-04-28T15:42:51.000Z",
+          "message": "reproducing issue #2"
+        }
+      ],
+      "obituary": {
+        "id": "a24e1d87ba87e9b4",
+        "death_id": "306c6c54ce10c64c",
+        "summary": "A critical JavaScript file, `test/issue-31.js`, was deleted due to a planned refactor of the codebase, specifically addressing a potential issue with the `should` module's integration with the `express` framework.",
+        "cause": "refactor",
+        "confidence": 0.95,
+        "cites": [
+          "c4f5092dcd13bbcd4c83bc7df8a315903d3e5c43"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:39:04.387Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "3a46610b527165cb",
+      "repo_id": "6a88eb3a416902f4",
+      "path": "test/body-events.js",
+      "born_sha": "9af79275f43e88994be47e8d7f5c965b11e87edb",
+      "born_date": "2014-07-05T18:47:17.000Z",
+      "died_sha": "5d7beadf5d0daa7cf7388e615549ccdf5bc2c2f1",
+      "died_date": "2017-08-26T03:28:44.000Z",
+      "lifespan_days": 1147,
+      "last_words": "tests: remove unnecessary body-events test",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 80
+      },
+      "authors": [
+        "Douglas Christopher Wilson",
+        "Troy Goode"
+      ],
+      "first_version_snippet": "/*jslint indent: 2*/\n/*global require: true, module: true, describe: true, it: true, setTimeout: true*/\n\n(function () {\n\n  'use strict';\n\n  var should = require('should'),\n    express = require('express'),\n    supertest = require('supertest'),\n    bodyParser = require('body-parser'),\n    cors = require('../lib'),\n    dynamicOrigin,\n    app1,\n    app2,\n    text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo turpis, tempor id sem fringilla, cursus tristique purus. Mauris a sollicitudin magna. Etiam dui lacus, vehicula non dictum at, cursus vitae libero. Curabitur lorem nulla, sollicitudin id enim ut, vehicula rhoncus felis. Ut nec iaculis velit. Vivamus at augue nulla. Fusce at molestie arcu. Duis at dui at tellus mattis tincidunt. Vestibulum sit amet dictum metus. Curabitur nec pretium ante. Proin vulputate elit ac lorem gravida, sit amet placerat lorem fringilla. Mauris fermentum, diam et volutpat auctor, ante enim imperdiet purus, sit amet tincidunt ipsum nulla nec est. Fusce id ipsum in sem malesuada laoreet vitae non magna. Praesent commodo turpis in nulla egestas, eu posuere magna venenatis. Integer in aliquam sem. Fusce quis lorem tincidunt eros rutrum lobortis.\\n\\nNam aliquam cursus ipsum, a hendrerit purus. Cras ultrices viverra nunc ac lacinia. Sed sed diam orci. Vestibulum ut orci a nibh scelerisque pretium. Sed suscipit vestibulum metus, ac ultricies leo sodales a. Aliquam erat volutpat. Vestibulum mauris massa, luctus et libero vel, cursus suscipit nulla. Cras sed erat quis massa fermentum congue. Mauris ultrices sem ligula, id malesuada lectus tincidunt eget. Donec sed nisl elit. Aenean ac lobortis massa. Phasellus felis nisl, dictum a dui volutpat, dictum sagittis diam. Vestibulum lacinia tellus vel commodo consequat.\\n\\nNulla at varius nibh, non posuere enim. Curabitur urna est, ultrices vel sem nec, consequat molestie nisi. Aliquam sed augue sit amet ante viverra pretium. Cras aliquam turpis vitae eros gravida egestas. Etiam quis dolor non quam suscipit iaculis. Sed euismod est libero, ac ullamcorper elit hendrerit vitae. Vivamus sollicitudin nulla dolor, vitae porta lacus suscipit ac.\\n\\nSed volutpat, magna in scelerisque dapibus, eros ante volutpat nisi, ac condimentum diam sem sed justo. Aenean justo risus, bibendum vitae blandit ac, mattis quis nunc. Quisque non felis nec justo auctor accumsan non id odio. Mauris vel dui feugiat dolor dapibus convallis in et neque. Phasellus fermentum sollicitudin tortor ac pretium. Proin tristique accumsan nulla eu venenatis. Cras porta lorem ac arcu accumsan pulvinar. Sed dignissim leo augue, a pretium ante viverra id. Phasellus blandit at purus a malesuada. Nam et cursus mauris. Vivamus accumsan augue laoreet lectus lacinia eleifend. Fusce sit amet felis nunc. Pellentesque eu turpis nisl.\\n\\nPellentesque vitae quam feugiat, volutpat lectus et, faucibus massa. Maecenas consectetur quis nisi eu aliquam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam laoreet condimentum laoreet. Praesent sit amet massa sit amet dui porta condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed volutpat massa nec risus malesuada hendrerit.';\n\n  /* -------------------------------------------------------------------------- */\n\n  dynamicOrigin = function (origin, cb) {\n    setTimeout(function () {\n      cb(null, true);\n    }, 200);\n  };\n\n  /* -------------------------------------------------------------------------- */\n\n  app1 = express();\n  app1.use(cors({origin: dynamicOrigin}));\n  app1.use(bodyParser.json());\n  /*jslint unparam: true*/ // `req` is part of the signature, but not used in these routes\n  app1.post('/', function (req, res) {\n    res.send(req.body);\n  });\n  /*jslint unparam: false*/\n\n  /* -------------------------------------------------------------------------- */\n\n  app2 = express();\n  app2.use(bodyParser.json());\n  app2.use(cors({origin: dynamicOrigin}));\n  /*jslint unparam: true*/ // `req` is part of the signature, but not used in these routes\n  app2.post('/', function (req, res) {\n    res.send(req.body);\n  });\n  /*jslint unparam: false*/\n\n  /* -------------------------------------------------------------------------- */\n\n  describe('body-parser-events', function () {\n    describe('app1 (cors before bodyparser)', function () {\n      it('POST works', function (done) {\n        var body = {\n          example: text\n        };\n        supertest(app1)\n          .post('/')\n          .send(body)\n          .expect(200)\n          .end(function (err, res) {\n            should.not.exist(err);\n            res.body.should.eql(body);\n            done();\n          });\n      });\n    });\n\n    describe('app2 (bodyparser before cors)', function () {\n      it('POST works', function (done) {\n        var body = {\n          example: text\n        };\n        supertest(app2)\n          .post('/')\n          .send(body)\n          .expect(200)\n          .end(function (err, res) {\n            should.not.exist(err);\n            res.body.should.eql(body);\n            done();",
+      "final_diff": "diff --git a/test/body-events.js b/test/body-events.js\ndeleted file mode 100644\nindex f35489f..0000000\n--- a/test/body-events.js\n+++ /dev/null\n@@ -1,80 +0,0 @@\n-(function () {\n-\n-  'use strict';\n-\n-  var should = require('should'),\n-    express = require('express'),\n-    supertest = require('supertest'),\n-    bodyParser = require('body-parser'),\n-    cors = require('../lib');\n-\n-  var dynamicOrigin,\n-    app1,\n-    app2,\n-    text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo turpis, tempor id sem fringilla, cursus tristique purus. Mauris a sollicitudin magna. Etiam dui lacus, vehicula non dictum at, cursus vitae libero. Curabitur lorem nulla, sollicitudin id enim ut, vehicula rhoncus felis. Ut nec iaculis velit. Vivamus at augue nulla. Fusce at molestie arcu. Duis at dui at tellus mattis tincidunt. Vestibulum sit amet dictum metus. Curabitur nec pretium ante. Proin vulputate elit ac lorem gravida, sit amet placerat lorem fringilla. Mauris fermentum, diam et volutpat auctor, ante enim imperdiet purus, sit amet tincidunt ipsum nulla nec est. Fusce id ipsum in sem malesuada laoreet vitae non magna. Praesent commodo turpis in nulla egestas, eu posuere magna venenatis. Integer in aliquam sem. Fusce quis lorem tincidunt eros rutrum lobortis.\\n\\nNam aliquam cursus ipsum, a hendrerit purus. Cras ultrices viverra nunc ac lacinia. Sed sed diam orci. Vestibulum ut orci a nibh scelerisque pretium. Sed suscipit vestibulum metus, ac ultricies leo sodales a. Aliquam erat volutpat. Vestibulum mauris massa, luctus et libero vel, cursus suscipit nulla. Cras sed erat quis massa fermentum congue. Mauris ultrices sem ligula, id malesuada lectus tincidunt eget. Donec sed nisl elit. Aenean ac lobortis massa. Phasellus felis nisl, dictum a dui volutpat, dictum sagittis diam. Vestibulum lacinia tellus vel commodo consequat.\\n\\nNulla at varius nibh, non posuere enim. Curabitur urna est, ultrices vel sem nec, consequat molestie nisi. Aliquam sed augue sit amet ante viverra pretium. Cras aliquam turpis vitae eros gravida egestas. Etiam quis dolor non quam suscipit iaculis. Sed euismod est libero, ac ullamcorper elit hendrerit vitae. Vivamus sollicitudin nulla dolor, vitae porta lacus suscipit ac.\\n\\nSed volutpat, magna in scelerisque dapibus, eros ante volutpat nisi, ac condimentum diam sem sed justo. Aenean justo risus, bibendum vitae blandit ac, mattis quis nunc. Quisque non felis nec justo auctor accumsan non id odio. Mauris vel dui feugiat dolor dapibus convallis in et neque. Phasellus fermentum sollicitudin tortor ac pretium. Proin tristique accumsan nulla eu venenatis. Cras porta lorem ac arcu accumsan pulvinar. Sed dignissim leo augue, a pretium ante viverra id. Phasellus blandit at purus a malesuada. Nam et cursus mauris. Vivamus accumsan augue laoreet lectus lacinia eleifend. Fusce sit amet felis nunc. Pellentesque eu turpis nisl.\\n\\nPellentesque vitae quam feugiat, volutpat lectus et, faucibus massa. Maecenas consectetur quis nisi eu aliquam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam laoreet condimentum laoreet. Praesent sit amet massa sit amet dui porta condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed volutpat massa nec risus malesuada hendrerit.';\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  dynamicOrigin = function (origin, cb) {\n-    setTimeout(function () {\n-      cb(null, true);\n-    }, 200);\n-  };\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  app1 = express();\n-  app1.use(cors({origin: dynamicOrigin}));\n-  app1.use(bodyParser.json());\n-  app1.post('/', function (req, res) {\n-    res.send(req.body);\n-  });\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  app2 = express();\n-  app2.use(bodyParser.json());\n-  app2.use(cors({origin: dynamicOrigin}));\n-  app2.post('/', function (req, res) {\n-    res.send(req.body);\n-  });\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  describe('body-parser-events', function () {\n-    describe('app1 (cors before bodyparser)', function () {\n-      it('POST works', function (done) {\n-        var body = {\n-          example: text\n-        };\n-        supertest(app1)\n-          .post('/')\n-          .send(body)\n-          .expect(200)\n-          .end(function (err, res) {\n-            should.not.exist(err);\n-            res.body.should.eql(body);\n-            done();\n-          });\n-      });\n-    });\n-\n-    describe('app2 (bodyparser before cors)', function () {\n-      it('POST works', function (done) {\n-        var body = {\n-          example: text\n-        };\n-        supertest(app2)\n-          .post('/')\n-          .send(body)\n-          .expect(200)\n-          .end(function (err, res) {\n-            should.not.exist(err);\n-            res.body.should.eql(body);\n-            done();\n-          });\n-      });\n-    });\n-  });\n-\n-}());\n",
+      "commit_history": [
+        {
+          "sha": "5d7beadf5d0daa7cf7388e615549ccdf5bc2c2f1",
+          "shortSha": "5d7bead",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-08-26T03:28:44.000Z",
+          "message": "tests: remove unnecessary body-events test"
+        },
+        {
+          "sha": "00ce63a3fda7794c0e0e148fe4b9093bd75c811d",
+          "shortSha": "00ce63a",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-07-13T03:52:30.000Z",
+          "message": "build: eslint@2.13.1"
+        },
+        {
+          "sha": "fcd2b56ac3fca05b05ca6f6b39fd0dc2587ec76b",
+          "shortSha": "fcd2b56",
+          "author": "Troy Goode",
+          "date": "2015-05-28T22:35:32.000Z",
+          "message": "issue #42: (WIP) switch to ESLint; clean up"
+        },
+        {
+          "sha": "9af79275f43e88994be47e8d7f5c965b11e87edb",
+          "shortSha": "9af7927",
+          "author": "Troy Goode",
+          "date": "2014-07-05T18:47:17.000Z",
+          "message": "fix #6 fix #19 fix #20. bump to 2.4.0"
+        }
+      ],
+      "obituary": {
+        "id": "obit-template-3a46610b527165cb",
+        "death_id": "3a46610b527165cb",
+        "summary": "Removed test/body-events.js after 1147 days. Final commit 5d7bead by Douglas Christopher Wilson: \"tests: remove unnecessary body-events test\". Purged 80 lines of historical code.",
+        "cause": "refactor",
+        "confidence": 1,
+        "cites": [
+          "5d7beadf5d0daa7cf7388e615549ccdf5bc2c2f1"
+        ],
+        "is_template": true,
+        "created_at": "2026-10-30T13:39:06.485Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "4c0b4d1a2829d1fa",
+      "repo_id": "6a88eb3a416902f4",
+      "path": "test/basic-auth.js",
+      "born_sha": "bf4d8b05c3c5d62c15b0c101bc9bf6145fff8648",
+      "born_date": "2014-07-09T03:46:19.000Z",
+      "died_sha": "8a448ccbf888ea8148c3608d48f3b093c56da98b",
+      "died_date": "2017-08-26T03:22:09.000Z",
+      "lifespan_days": 1144,
+      "last_words": "tests: remove redundant basic-auth test",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 39
+      },
+      "authors": [
+        "Douglas Christopher Wilson",
+        "Troy Goode"
+      ],
+      "first_version_snippet": "/*jslint indent: 2*/\n/*global require: true, module: true, describe: true, it: true, setTimeout: true*/\n\n(function () {\n\n  'use strict';\n\n  var should = require('should'),\n    express = require('express'),\n    supertest = require('supertest'),\n    basicAuth = require('basic-auth-connect'),\n    cors = require('../lib'),\n    app;\n\n  /* -------------------------------------------------------------------------- */\n\n  app = express();\n  app.use(basicAuth('username', 'password'));\n  app.use(cors());\n  /*jslint unparam: true*/ // `req` is part of the signature, but not used in these routes\n  app.post('/', function (req, res) {\n    res.send('hello world');\n  });\n  /*jslint unparam: false*/\n\n  /* -------------------------------------------------------------------------- */\n\n  describe('basic auth', function () {\n    describe('', function () {\n      it('POST works', function (done) {\n        supertest(app)\n          .post('/')\n          .auth('username', 'password')\n          .expect(200)\n          .end(function (err, res) {\n            should.not.exist(err);\n            res.text.should.eql('hello world');\n            done();\n          });\n      });\n    });\n  });\n\n}());\n\n",
+      "final_diff": "diff --git a/test/basic-auth.js b/test/basic-auth.js\ndeleted file mode 100644\nindex 3a552a3..0000000\n--- a/test/basic-auth.js\n+++ /dev/null\n@@ -1,39 +0,0 @@\n-(function () {\n-\n-  'use strict';\n-\n-  var should = require('should'),\n-    express = require('express'),\n-    supertest = require('supertest'),\n-    basicAuth = require('basic-auth-connect'),\n-    cors = require('../lib');\n-\n-  var app;\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  app = express();\n-  app.use(basicAuth('username', 'password'));\n-  app.use(cors());\n-  app.post('/', function (req, res) {\n-    res.send('hello world');\n-  });\n-\n-  /* -------------------------------------------------------------------------- */\n-\n-  describe('basic auth', function () {\n-    it('POST works', function (done) {\n-      supertest(app)\n-        .post('/')\n-        .auth('username', 'password')\n-        .expect(200)\n-        .end(function (err, res) {\n-          should.not.exist(err);\n-          res.headers['access-control-allow-origin'].should.eql('*');\n-          res.text.should.eql('hello world');\n-          done();\n-        });\n-    });\n-  });\n-\n-}());\n",
+      "commit_history": [
+        {
+          "sha": "8a448ccbf888ea8148c3608d48f3b093c56da98b",
+          "shortSha": "8a448cc",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-08-26T03:22:09.000Z",
+          "message": "tests: remove redundant basic-auth test"
+        },
+        {
+          "sha": "00ce63a3fda7794c0e0e148fe4b9093bd75c811d",
+          "shortSha": "00ce63a",
+          "author": "Douglas Christopher Wilson",
+          "date": "2017-07-13T03:52:30.000Z",
+          "message": "build: eslint@2.13.1"
+        },
+        {
+          "sha": "fcd2b56ac3fca05b05ca6f6b39fd0dc2587ec76b",
+          "shortSha": "fcd2b56",
+          "author": "Troy Goode",
+          "date": "2015-05-28T22:35:32.000Z",
+          "message": "issue #42: (WIP) switch to ESLint; clean up"
+        },
+        {
+          "sha": "f97589289b153b22c771448090f391bdf71f0be5",
+          "shortSha": "f975892",
+          "author": "Troy Goode",
+          "date": "2014-07-09T20:00:27.000Z",
+          "message": "more error response testing for #26"
+        },
+        {
+          "sha": "ae72c86d7cb96ba85bf523d953575a8dd822ad08",
+          "shortSha": "ae72c86",
+          "author": "Troy Goode",
+          "date": "2014-07-09T19:54:49.000Z",
+          "message": "add test trying to replicate #26"
+        },
+        {
+          "sha": "bf4d8b05c3c5d62c15b0c101bc9bf6145fff8648",
+          "shortSha": "bf4d8b0",
+          "author": "Troy Goode",
+          "date": "2014-07-09T03:46:19.000Z",
+          "message": "testing for #25"
+        }
+      ],
+      "obituary": {
+        "id": "c3d66badadc9a77f",
+        "death_id": "4c0b4d1a2829d1fa",
+        "summary": "The file `test/basic-auth.js` was deleted due to a rewrite of the authentication logic, specifically addressing a potential security vulnerability identified in the `f97589289b153b22c771448090f391bdf71f0be5` commit.",
+        "cause": "refactor",
+        "confidence": 0.95,
+        "cites": [
+          "8a448ccbf888ea8148c3608d48f3b093c56da98b",
+          "f97589289b153b22c771448090f391bdf71f0be5"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:39:08.705Z"
+      },
+      "hauntingCount": 0
+    },
+    {
+      "id": "4a1da22675c114f2",
+      "repo_id": "6a88eb3a416902f4",
+      "path": "lib/index2.js",
+      "born_sha": "a821a395c16958584bb0a4ab890fa0de8bdc2a21",
+      "born_date": "2013-10-10T00:36:04.000Z",
+      "died_sha": "4f13c630b23320dfe888008315fc493874e8b920",
+      "died_date": "2013-10-10T00:49:43.000Z",
+      "lifespan_days": 0,
+      "last_words": "wrapping up",
+      "diff_stat": {
+        "insertions": 0,
+        "deletions": 162
+      },
+      "authors": [
+        "Troy Goode"
+      ],
+      "first_version_snippet": "/*jslint nodejs: true*/\n\nvar defaults = {\n  origin: '*',\n  methods: 'GET,HEAD,PUT,POST,DELETE'\n};\n\nfunction configureOrigin(options, req){\n  return {\n    key: 'Access-Control-Allow-Origin',\n    value: options.origin === true ? req.header('Origin') : options.origin\n  };\n}\n\nfunction configureMethods(options, req){\n  var methods = options.methods || defaults.methods;\n  if(methods.join){\n    methods = options.methods.join(','); // .methods is an array, so turn it into a string\n  }\n  return {\n    key: 'Access-Control-Allow-Methods',\n    value: methods\n  };\n}\n\nfunction configureCredentials(options, req){\n  if(options.credentials === true){\n    return {\n      key: 'Access-Control-Allow-Credentials',\n      value: 'true'\n    };\n  }else{\n    return null;\n  }\n}\n\nfunction configureHeaders(options, req){\n  var headers;\n  if(options.headers === undefined){\n    headers = req.header('Access-Control-Request-Headers'); // .headers wasn't specified, so reflect the request headers\n  }else if(options.headers.join){\n    headers = options.headers.join(','); // .headers is an array, so turn it into a string\n  }else{\n    headers = options.headers;\n  }\n  if(headers && headers.length){\n    return {\n      key: 'Access-Control-Allow-Headers',\n      value: headers\n    };\n  }else{\n    return null;\n  }\n}\n\nfunction configureMaxAge(options, req){\n  var maxAge = options.maxAge && options.maxAge.toString();\n  if(maxAge && maxAge.length){\n    return {\n      key: 'Access-Control-Allow-Max-Age',\n      value: maxAge\n    };\n  }else{\n    return null;\n  }\n}\n\nfunction cors(options, req, res, next){\n  var applyHeaders = function(headers, res){\n    headers.forEach(function(header){\n      if(header && header.value){\n        res.header(header.key, header.value);\n      }\n    });\n  };\n\n  var headers = [];\n  if(req.method === 'OPTIONS'){\n    headers.push(configureOrigin(options, req));\n    headers.push(configureCredentials(options, req));",
+      "final_diff": "diff --git a/lib/index2.js b/lib/index2.js\ndeleted file mode 100644\nindex 3c205b1..0000000\n--- a/lib/index2.js\n+++ /dev/null\n@@ -1,162 +0,0 @@\n-/*jslint nodejs: true*/\n-\n-(function(){\n-\n-  'use strict';\n-\n-  var defaults = {\n-    origin: '*',\n-    methods: 'GET,HEAD,PUT,POST,DELETE'\n-  };\n-\n-  function configureOrigin(options, req){\n-    var origin = options.origin;\n-    if(origin === true){\n-      origin = req.header('Origin');\n-    }else if(!origin){\n-      origin = '*';\n-    }\n-    return {\n-      key: 'Access-Control-Allow-Origin',\n-      value: origin\n-    };\n-  }\n-\n-  function configureMethods(options, req){\n-    var methods = options.methods || defaults.methods;\n-    if(methods.join){\n-      methods = options.methods.join(','); // .methods is an array, so turn it into a string\n-    }\n-    return {\n-      key: 'Access-Control-Allow-Methods',\n-      value: methods\n-    };\n-  }\n-\n-  function configureCredentials(options, req){\n-    if(options.credentials === true){\n-      return {\n-        key: 'Access-Control-Allow-Credentials',\n-        value: 'true'\n-      };\n-    }else{\n-      return null;\n-    }\n-  }\n-\n-  function configureHeaders(options, req){\n-    var headers = options.headers;\n-    if(!headers){\n-      headers = req.header('Access-Control-Request-Headers'); // .headers wasn't specified, so reflect the request headers\n-    }else if(headers.join){\n-      headers = headers.join(','); // .headers is an array, so turn it into a string\n-    }\n-    if(headers && headers.length){\n-      return {\n-        key: 'Access-Control-Allow-Headers',\n-        value: headers\n-      };\n-    }else{\n-      return null;\n-    }\n-  }\n-\n-  function configureMaxAge(options, req){\n-    var maxAge = options.maxAge && options.maxAge.toString();\n-    if(maxAge && maxAge.length){\n-      return {\n-        key: 'Access-Control-Allow-Max-Age',\n-        value: maxAge\n-      };\n-    }else{\n-      return null;\n-    }\n-  }\n-\n-  function cors(options, req, res, next){\n-    var headers = [],\n-        applyHeaders = function(headers, res){\n-          headers.forEach(function(header){\n-            if(header && header.value){\n-              res.header(header.key, header.value);\n-            }\n-          });\n-        };\n-\n-    if(req.method === 'OPTIONS'){\n-      headers.push(configureOrigin(options, req));\n-      headers.push(configureCredentials(options, req));\n-      headers.push(configureMethods(options, req));\n-      headers.push(configureHeaders(options, req));\n-      headers.push(configureMaxAge(options, req));\n-      applyHeaders(headers, res);\n-      res.send(204);\n-    }else{\n-      headers.push(configureOrigin(options, req));\n-      headers.push(configureCredentials(options, req));\n-      applyHeaders(headers, res);\n-      next();\n-    }\n-  }\n-\n-  function middlewareWrapper(o){\n-    // if no options were passed in, use the defaults\n-    if(!o){\n-      o = {};\n-    }\n-    if(o.origin === undefined){\n-      o.origin = defaults.origin;\n-    }\n-    if(o.methods === undefined){\n-      o.methods = defaults.methods;\n-    }\n-\n-    // if options are static (either via defaults or custom options passed in), wrap in a function\n-    var optionsCallback = null;\n-    if(typeof(o) === 'function'){\n-      optionsCallback = o;\n-    }else{\n-      optionsCallback = function(req, cb){\n-        cb(null, o);\n-      };\n-    }\n-\n-    return function(req, res, next){\n-      req.pause(); // make sure downstream middleware don't miss any data events\n-      optionsCallback(req, function(err, options){\n-        req.resume();\n-        if(err){\n-          next(err);\n-        }else{\n-          var originCallback = null;\n-          if(options.origin && typeof(options.origin) === 'function'){\n-            originCallback = options.origin;\n-          }else if(options.origin){\n-            originCallback = function(origin, cb){\n-              cb(null, options.origin);\n-            };\n-          }\n-\n-          if(originCallback){\n-            req.pause(); // make sure downstream middleware don't miss any data events\n-            originCallback(req.header('Origin'), function(err, origin){\n-              req.resume();\n-              if(err || !origin){",
+      "commit_history": [
+        {
+          "sha": "4f13c630b23320dfe888008315fc493874e8b920",
+          "shortSha": "4f13c63",
+          "author": "Troy Goode",
+          "date": "2013-10-10T00:49:43.000Z",
+          "message": "wrapping up"
+        },
+        {
+          "sha": "6202640725cef0a95a1b7f197c930d1f391066d4",
+          "shortSha": "6202640",
+          "author": "Troy Goode",
+          "date": "2013-10-10T00:48:11.000Z",
+          "message": "tests passing"
+        },
+        {
+          "sha": "741961b39911fb32b1052ae5651daa691f309ae2",
+          "shortSha": "741961b",
+          "author": "Troy Goode",
+          "date": "2013-10-10T00:42:42.000Z",
+          "message": "more lint"
+        },
+        {
+          "sha": "5424946e07ab1ea3d5cfb6ca8ac128f860904c64",
+          "shortSha": "5424946",
+          "author": "Troy Goode",
+          "date": "2013-10-10T00:36:49.000Z",
+          "message": "pass lint"
+        },
+        {
+          "sha": "a821a395c16958584bb0a4ab890fa0de8bdc2a21",
+          "shortSha": "a821a39",
+          "author": "Troy Goode",
+          "date": "2013-10-10T00:36:04.000Z",
+          "message": "WIP"
+        }
+      ],
+      "obituary": {
+        "id": "89b54f6aa49332ae",
+        "death_id": "4a1da22675c114f2",
+        "summary": "The `lib/index2.js` file, a JavaScript module, was deleted due to a change in its intended functionality, likely a rewrite or refactor of the code.",
+        "cause": "rewrite",
+        "confidence": 0.95,
+        "cites": [
+          "4f13c630b23320dfe888008315fc493874e8b920"
+        ],
+        "is_template": false,
+        "created_at": "2026-10-30T13:39:10.249Z"
+      },
+      "hauntingCount": 0
+    }
+  ],
+  "hauntings": [],
+  "exorcisms": []
+}

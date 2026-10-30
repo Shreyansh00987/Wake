@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  wake:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wake-app
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - OLLAMA_HOST=http://host.docker.internal:11434
+      - WAKE_MODEL=gemma3:1b
+      - MAX_DEATHS_CAP=50
+    volumes:
+      - ./data:/app/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
