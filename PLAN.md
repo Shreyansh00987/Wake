@@ -1,6 +1,6 @@
-# Phase 5 Plan: Precomputed Sample Scans, Docker & Deployment Config
-1. Build sample export script in scripts/generate_samples.ts to dump full real scans into samples/wake.json and samples/cors.json.
-2. Generate authenticated precomputed sample files capturing real deaths, obituaries, citations, and hauntings.
-3. Add fallback sample loader to API routes so hosted cloud environments (e.g. Render) serve authentic precomputed scans.
-4. Author multi-stage Dockerfile and docker-compose.yml for one-command local offline execution.
-5. Write render.yaml deploy configuration and document hosted read-only behavior with complete transparency.
+# Phase 6 Plan: Documentation, DEV Submission, Demo Script & Final Audit
+1. Finalize README.md with comprehensive quickstart, verified model licenses, honest false-positive analysis, and post-deadline commit log.
+2. Author DEMO_SCRIPT.md providing a crisp 2-3 minute walkthrough (Wi-Fi off, live scan, SHA verification, haunting discovery, exorcise diff).
+3. Author DEV_POST_DRAFT.md using the official contest template, tags, real measured numbers from eval/RESULTS.md, and open innovation essay.
+4. Author FINAL_REPORT.md listing completed features, cut scope, known limitations, and manual user checklist.
+5. Execute full test suite, conduct repository hygiene audit, and execute final commit.

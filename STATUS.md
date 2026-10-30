@@ -1,24 +1,16 @@
 # Project Status
 
-## Current Phase: P5 Complete -> Transitioning to P6 (Documentation, Post Draft, Script & Final Audit)
+## Current Phase: Complete (All Phases P0–P6 Complete & Verified)
 
-### Done (P5)
-- Generated authenticated precomputed sample scans:
-  - `samples/wake.json`: 3 historical deaths, Gemma 3 1B obituaries, 2 active hauntings.
-  - `samples/cors.json`: 9 historical deletions from `expressjs/cors` (MIT), diffstats, author attribution, and grounded obituaries.
-- Enhanced API endpoints with transparent sample fallback so hosted cloud environments (e.g. Render) without local git or Ollama daemons cleanly serve real, authentic precomputed data.
-- Authored production multi-stage `Dockerfile` (Node 22 slim, git, ripgrep, non-root runner).
-- Authored `docker-compose.yml` for clean one-command local execution.
-- Authored `render.yaml` deployment configuration with clear, honest notes about precomputed data on cloud demo tiers.
-- Verified Next.js production build (`npm run build`).
+### Done (P6)
+- Finalized comprehensive `README.md` with:
+  - Architecture breakdown distinguishing between open-source software and open-weight models (`gemma3:1b`, 806 MB, Gemma Terms of Use; `qwen2.5-coder:1.5b` fallback).
+  - Quickstart guides for both local npm development and one-command Docker Compose.
+  - Honest false-positive notes, system limitations, and transparent post-deadline commit log.
+- Authored `DEMO_SCRIPT.md`: crisp 2.5-minute video walkthrough showcasing offline proof (Wi-Fi off), real live-rendered data from Wake's own repo, interactive D3 timeline, headstone sheet with expandable commit SHA chips, the surprise ghost in `src/lib/survivor_docs.md`, and copy-only unified diff generation.
+- Authored `DEV_POST_DRAFT.md`: full submission post meeting DEV challenge criteria (tags `#devchallenge`, `#hf26challenge`), concrete opening scene from a real headstone, real measured numbers from `eval/RESULTS.md`, and an essay on why open innovation matters.
+- Created `FINAL_REPORT.md`: complete recap of built capabilities, scope review, and user checklist for manual tasks.
+- Verified test suite: all 12 unit tests pass across ingestion, real-world fixtures (`expressjs/cors`), obituary citation verification, and ripgrep haunting detection.
 
-### Next (P6)
-- Complete comprehensive `README.md`:
-  - Architecture, quick start, license notes (Ollama MIT, Gemma Terms of Use, ripgrep MIT), limitations, false-positive notes, credits, and post-deadline commits section.
-- Write `DEMO_SCRIPT.md` (2-3 minutes walkthrough: Wi-Fi visibly off, scan fills graveyard, open headstone, clickable SHA chips, surprise ghost reference, exorcise diff, ending on "$0, offline").
-- Draft official DEV submission post `DEV_POST_DRAFT.md` following challenge requirements and templates with real measured numbers.
-- Generate `FINAL_REPORT.md` with checklist of manual items (claiming domain, recording video, publishing post).
-- Run full test suite and make final clean commit.
-
-### Risks & Mitigations
-- None. All MVP and deliverable specifications are fully implemented and verified.
+### Next
+- User executes manual tasks (domain registration, video recording, publishing DEV post).
