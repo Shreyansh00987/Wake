@@ -1,14 +1,14 @@
 {
-  "exported_at": "2026-10-30T13:38:49.542Z",
+  "exported_at": "2026-10-30T14:42:48.591Z",
   "generator": "Wake Precomputed Sample Exporter",
   "model": "gemma3:1b",
   "repo": {
     "id": "eefb118c468c369e",
     "name": "Wake",
     "path": "D:\\Project\\Wake",
-    "last_scanned_at": "2026-10-30T13:38:49.542Z",
+    "last_scanned_at": "2026-10-30T14:42:48.591Z",
     "death_count": 3,
-    "haunting_count": 2
+    "haunting_count": 5
   },
   "deaths": [
     {
@@ -47,9 +47,9 @@
         }
       ],
       "obituary": {
-        "id": "b79cdb36e632c3a8",
+        "id": "0d9cb0a7eaf757fb",
         "death_id": "4aab24fe9f626cc6",
-        "summary": "Archive of a deleted TypeScript file, `src/lib/legacy_prototype.ts`, which was removed due to its age and potential obsolescence within the codebase.",
+        "summary": "Archive of a deleted TypeScript file, `src/lib/legacy_prototype.ts`, which was removed due to its age and lack of recent activity, suggesting it was no longer actively used or maintained.",
         "cause": "abandoned_experiment",
         "confidence": 0.95,
         "cites": [
@@ -57,9 +57,9 @@
           "a4ca569dccfde708a684338f3c8637b690328184"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:38:45.276Z"
+        "created_at": "2026-10-30T14:42:44.029Z"
       },
-      "hauntingCount": 2
+      "hauntingCount": 5
     },
     {
       "id": "3b196a1441d32aa0",
@@ -107,7 +107,7 @@
           "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:38:47.001Z"
+        "created_at": "2026-10-30T14:42:45.829Z"
       },
       "hauntingCount": 0
     },
@@ -147,21 +147,58 @@
         }
       ],
       "obituary": {
-        "id": "9f0935af8203fad8",
+        "id": "87fae2d7bdc0ec1d",
         "death_id": "93e307bce79f15b0",
-        "summary": "The `src/lib/temp_config.json` file was deleted as part of a refactor focused on streamlining configuration management. The deletion was triggered by a commit message indicating a purge of deprecated legacy prototype, old telemetry, and temporary config modules, likely to improve maintainability and reduce code complexity.",
+        "summary": "The `src/lib/temp_config.json` file was deleted as part of a refactoring effort, specifically to remove deprecated legacy configuration modules, telemetry, and temporary config elements.",
         "cause": "refactor",
-        "confidence": 0.95,
+        "confidence": 1,
         "cites": [
-          "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d"
+          "99dad80b49fa942f9ac7acd80115b6d7c8fdef4d",
+          "dc83d4fbb75f34771685923c37655143c48437f4"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:38:48.800Z"
+        "created_at": "2026-10-30T14:42:47.840Z"
       },
       "hauntingCount": 0
     }
   ],
   "hauntings": [
+    {
+      "id": "e61c60425d6de130",
+      "repo_id": "eefb118c468c369e",
+      "death_id": "4aab24fe9f626cc6",
+      "dead_path": "src/lib/legacy_prototype.ts",
+      "dead_symbol": "legacy_prototype.ts",
+      "file": "DEMO_SCRIPT.md",
+      "line": 32,
+      "snippet": "- **Visual:** Click on `src/lib/legacy_prototype.ts` in the ledger. The right-hand Headstone drawer slides open smoothly.",
+      "reason": "Surviving link or reference in active documentation \"DEMO_SCRIPT.md\"",
+      "confidence": 0.95
+    },
+    {
+      "id": "f21b7b5f349aaf9e",
+      "repo_id": "eefb118c468c369e",
+      "death_id": "4aab24fe9f626cc6",
+      "dead_path": "src/lib/legacy_prototype.ts",
+      "dead_symbol": "legacy_prototype.ts",
+      "file": "DEMO_SCRIPT.md",
+      "line": 45,
+      "snippet": "- **Visual:** Show the match: `src/lib/survivor_docs.md` line 4 still contains `\"Active documentation still remembers legacy_prototype.ts\"`.",
+      "reason": "Surviving link or reference in active documentation \"DEMO_SCRIPT.md\"",
+      "confidence": 0.95
+    },
+    {
+      "id": "58d2d196af37edac",
+      "repo_id": "eefb118c468c369e",
+      "death_id": "4aab24fe9f626cc6",
+      "dead_path": "src/lib/legacy_prototype.ts",
+      "dead_symbol": "legacy_prototype.ts",
+      "file": "DEMO_SCRIPT.md",
+      "line": 52,
+      "snippet": "-Active documentation still remembers legacy_prototype.ts.",
+      "reason": "Surviving link or reference in active documentation \"DEMO_SCRIPT.md\"",
+      "confidence": 0.95
+    },
     {
       "id": "c3f90d3c01e53027",
       "repo_id": "eefb118c468c369e",
@@ -188,6 +225,36 @@
     }
   ],
   "exorcisms": [
+    {
+      "haunting_id": "e61c60425d6de130",
+      "diff": {
+        "death_id": "4aab24fe9f626cc6",
+        "target_file": "DEMO_SCRIPT.md",
+        "diff": "--- a/DEMO_SCRIPT.md\n+++ b/DEMO_SCRIPT.md\n@@ -29,7 +29,6 @@\n ---\n \n ### [0:55 - 1:35] Scene 3: The Headstone & Clickable Commit Chips\n-- **Visual:** Click on `src/lib/legacy_prototype.ts` in the ledger. The right-hand Headstone drawer slides open smoothly.\n - **Visual:** Zoom in on vital stats: \"BORN: 2026-10-30\", \"DIED: 2026-10-30\", \"LINES PURGED: -5\".\n - **Visual:** Show the grounded obituary generated by `gemma3:1b`.\n - **Visual:** Click the verified commit SHA chip `commit a4ca569`. The chip expands inline, revealing the real commit message (\"feat(prototype): add temporary legacy prototype module\"), author, and timestamp.",
+        "original_line": 32,
+        "dead_reference": "legacy_prototype.ts"
+      }
+    },
+    {
+      "haunting_id": "f21b7b5f349aaf9e",
+      "diff": {
+        "death_id": "4aab24fe9f626cc6",
+        "target_file": "DEMO_SCRIPT.md",
+        "diff": "--- a/DEMO_SCRIPT.md\n+++ b/DEMO_SCRIPT.md\n@@ -42,7 +42,6 @@\n \n ### [1:35 - 2:05] Scene 4: The Surprise — The Ghost in the Machine\n - **Visual:** Scroll down the Headstone sheet to the amber-gold banner: `⚠ STILL HAUNTING (2)`.\n-- **Visual:** Show the match: `src/lib/survivor_docs.md` line 4 still contains `\"Active documentation still remembers legacy_prototype.ts\"`.\n - **Visual:** Click the `Exorcise` button. The Exorcise Modal opens, displaying a clean, copy-only unified diff:\n   ```diff\n   --- a/src/lib/survivor_docs.md",
+        "original_line": 45,
+        "dead_reference": "legacy_prototype.ts"
+      }
+    },
+    {
+      "haunting_id": "58d2d196af37edac",
+      "diff": {
+        "death_id": "4aab24fe9f626cc6",
+        "target_file": "DEMO_SCRIPT.md",
+        "diff": "--- a/DEMO_SCRIPT.md\n+++ b/DEMO_SCRIPT.md\n@@ -49,7 +49,6 @@\n   +++ b/src/lib/survivor_docs.md\n   @@ -1,4 +1,3 @@\n    # Architectural Notes\n-  -Active documentation still remembers legacy_prototype.ts.\n   ```\n - **Visual:** Click \"Copy Unified Diff\". The button updates with a green checkmark: `✓ Copied to Clipboard!`.\n - **Narration:**",
+        "original_line": 52,
+        "dead_reference": "legacy_prototype.ts"
+      }
+    },
     {
       "haunting_id": "c3f90d3c01e53027",
       "diff": {

@@ -1,12 +1,12 @@
 {
-  "exported_at": "2026-10-30T13:39:11.489Z",
+  "exported_at": "2026-10-30T14:43:11.920Z",
   "generator": "Wake Precomputed Sample Exporter",
   "model": "gemma3:1b",
   "repo": {
     "id": "6a88eb3a416902f4",
     "name": "expressjs/cors",
     "path": "D:\\Project\\Wake\\fixtures\\cors",
-    "last_scanned_at": "2026-10-30T13:39:11.489Z",
+    "last_scanned_at": "2026-10-30T14:43:11.920Z",
     "death_count": 9,
     "haunting_count": 0
   },
@@ -70,16 +70,16 @@
         }
       ],
       "obituary": {
-        "id": "d15828a723d8d1e8",
+        "id": "4da523bda6f871e2",
         "death_id": "f5f2fafbd959551e",
-        "summary": "A critical security vulnerability in the `cors` middleware was identified and addressed, preventing potential cross-origin attacks.",
+        "summary": "A critical security vulnerability in the `cors` middleware was identified and removed, preventing potential cross-origin attacks.",
         "cause": "abandoned_experiment",
         "confidence": 0.95,
         "cites": [
           "7e6f7eeac0c16d9abed2cb84ac4b2891a51fa3dc"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:38:55.931Z"
+        "created_at": "2026-10-30T14:42:54.762Z"
       },
       "hauntingCount": 0
     },
@@ -287,10 +287,12 @@
         "cause": "abandoned_experiment",
         "confidence": 0.95,
         "cites": [
-          "7660d3e539301dffdd613b506ab5f07403e15c0b"
+          "7660d3e539301dffdd613b506ab5f07403e15c0b",
+          "4069e5eeff1783d153dc386da1c9cbd836f1c344",
+          "9c6f105d5fa900aa93a7d7479398fdd1ceb212cc"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:38:57.649Z"
+        "created_at": "2026-10-30T14:42:57.145Z"
       },
       "hauntingCount": 0
     },
@@ -354,7 +356,7 @@
           "f45d53395958bea5580c2fd08a83a2cd5058fc64"
         ],
         "is_template": true,
-        "created_at": "2026-10-30T13:38:59.392Z"
+        "created_at": "2026-10-30T14:42:59.378Z"
       },
       "hauntingCount": 0
     },
@@ -418,7 +420,7 @@
           "00d6eec1049054676b00beed13453e1d556af93b"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:39:01.071Z"
+        "created_at": "2026-10-30T14:43:01.092Z"
       },
       "hauntingCount": 0
     },
@@ -467,7 +469,7 @@
           "00d6eec1049054676b00beed13453e1d556af93b"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:39:02.541Z"
+        "created_at": "2026-10-30T14:43:02.717Z"
       },
       "hauntingCount": 0
     },
@@ -594,7 +596,7 @@
           "c4f5092dcd13bbcd4c83bc7df8a315903d3e5c43"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:39:04.387Z"
+        "created_at": "2026-10-30T14:43:04.679Z"
       },
       "hauntingCount": 0
     },
@@ -658,7 +660,7 @@
           "5d7beadf5d0daa7cf7388e615549ccdf5bc2c2f1"
         ],
         "is_template": true,
-        "created_at": "2026-10-30T13:39:06.485Z"
+        "created_at": "2026-10-30T14:43:06.814Z"
       },
       "hauntingCount": 0
     },
@@ -737,7 +739,7 @@
           "f97589289b153b22c771448090f391bdf71f0be5"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:39:08.705Z"
+        "created_at": "2026-10-30T14:43:09.163Z"
       },
       "hauntingCount": 0
     },
@@ -807,7 +809,7 @@
           "4f13c630b23320dfe888008315fc493874e8b920"
         ],
         "is_template": false,
-        "created_at": "2026-10-30T13:39:10.249Z"
+        "created_at": "2026-10-30T14:43:10.788Z"
       },
       "hauntingCount": 0
     }

@@ -73,6 +73,10 @@ export function runRipgrep(
       "!build/**",
       "!fixtures/**",
       "!data/**",
+      "!samples/**",
+      "!.agent/**",
+      "!**/*.sqlite*",
+      "!**/*.jsonl",
     ];
 
     const globs = [...defaultGlobs, ...(options.globs || [])];
