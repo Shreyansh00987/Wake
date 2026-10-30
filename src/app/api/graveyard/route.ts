@@ -69,5 +69,6 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({
     repo,
     deaths: deathsWithDetails,
+    allRepos: dbOps.getAllRepos(db),
   });
 }

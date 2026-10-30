@@ -32,5 +32,9 @@ export async function GET(req: NextRequest) {
   }
 
   const hauntings = dbOps.getHauntingsForRepo(db, targetRepoId);
-  return NextResponse.json({ hauntings });
+  return NextResponse.json({
+    hauntings,
+    repoId: targetRepoId,
+    allRepos: dbOps.getAllRepos(db),
+  });
 }

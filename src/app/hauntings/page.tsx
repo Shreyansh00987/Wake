@@ -1,31 +1,36 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { HauntingRecord, ExorciseDiff } from "@/types";
+import { HauntingRecord, ExorciseDiff, RepoRecord } from "@/types";
 import { ExorciseModal } from "@/components/ExorciseModal";
 
 export default function HauntingsPage() {
   const [hauntings, setHauntings] = useState<HauntingRecord[]>([]);
+  const [allRepos, setAllRepos] = useState<RepoRecord[]>([]);
+  const [selectedRepoId, setSelectedRepoId] = useState<string>("");
   const [loading, setLoading] = useState(true);
   const [activeExorcism, setActiveExorcism] = useState<ExorciseDiff | null>(null);
   const [exorcisingId, setExorcisingId] = useState<string | null>(null);
   const [filterQuery, setFilterQuery] = useState("");
 
-  useEffect(() => {
-    async function loadHauntings() {
-      try {
-        const res = await fetch("/api/hauntings");
-        if (res.ok) {
-          const data = await res.json();
-          setHauntings(data.hauntings || []);
-        }
-      } catch (err) {
-        console.error("Failed to load hauntings:", err);
-      } finally {
-        setLoading(false);
+  async function loadHauntings(targetRepoId?: string) {
+    try {
+      const url = targetRepoId ? `/api/hauntings?repoId=${targetRepoId}` : "/api/hauntings";
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        setHauntings(data.hauntings || []);
+        if (data.allRepos) setAllRepos(data.allRepos);
+        if (data.repoId) setSelectedRepoId(data.repoId);
       }
+    } catch (err) {
+      console.error("Failed to load hauntings:", err);
+    } finally {
+      setLoading(false);
     }
+  }
 
+  useEffect(() => {
     loadHauntings();
   }, []);
 
@@ -74,12 +79,31 @@ export default function HauntingsPage() {
             </p>
           </div>
 
-          {/* Quick Counter */}
-          <div className="flex items-center gap-2 px-3 py-1.5 border border-marigold/60 bg-marigold-dim shrink-0">
-            <span className="w-2 h-2 rounded-full bg-marigold animate-pulse" />
-            <span className="text-marigold font-medium text-xs tabular-nums">
-              {hauntings.length} Active Ghosts
-            </span>
+          {/* Quick Counter & Repo Selector */}
+          <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+            {allRepos.length > 1 && (
+              <select
+                value={selectedRepoId}
+                onChange={(e) => {
+                  setSelectedRepoId(e.target.value);
+                  loadHauntings(e.target.value);
+                }}
+                className="bg-ground border border-hairline px-2.5 py-1.5 text-xs text-content font-mono outline-none cursor-pointer focus:border-content"
+              >
+                {allRepos.map((r) => (
+                  <option key={r.id} value={r.id}>
+                    {r.name} ({r.haunting_count} ghosts)
+                  </option>
+                ))}
+              </select>
+            )}
+
+            <div className="flex items-center gap-2 px-3 py-1.5 border border-marigold/60 bg-marigold-dim shrink-0">
+              <span className="w-2 h-2 rounded-full bg-marigold animate-pulse" />
+              <span className="text-marigold font-medium text-xs tabular-nums">
+                {hauntings.length} Active Ghosts
+              </span>
+            </div>
           </div>
         </div>
 
@@ -108,7 +132,7 @@ export default function HauntingsPage() {
       ) : filtered.length === 0 ? (
         <div className="border border-hairline p-12 text-center bg-surface/20 space-y-2">
           <div className="text-ash-dark text-xl font-mono">†</div>
-          <p className="text-content font-mono font-medium text-sm">No ghosts detected.</p>
+          <p className="text-content font-mono font-medium text-sm">No ghosts detected in this archive.</p>
           <p className="font-sans text-xs text-ash max-w-md mx-auto">
             All surviving code, documentation, and configuration files are cleanly untangled from dead references.
           </p>

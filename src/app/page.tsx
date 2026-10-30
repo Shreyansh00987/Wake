@@ -12,6 +12,7 @@ export default function NecropolisLandingPage() {
   const [deaths, setDeaths] = useState<
     Array<DeathRecord & { obituary: ObituaryRecord; hauntingCount: number }>
   >([]);
+  const [allRepos, setAllRepos] = useState<RepoRecord[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Sheet & Modal state
@@ -22,31 +23,33 @@ export default function NecropolisLandingPage() {
   // System status
   const [status, setStatus] = useState<any>(null);
 
-  useEffect(() => {
-    async function loadData() {
-      try {
-        const [graveyardRes, statusRes] = await Promise.all([
-          fetch("/api/graveyard"),
-          fetch("/api/status"),
-        ]);
+  async function loadData(targetRepoId?: string) {
+    try {
+      const gUrl = targetRepoId ? `/api/graveyard?repoId=${targetRepoId}` : "/api/graveyard";
+      const [graveyardRes, statusRes] = await Promise.all([
+        fetch(gUrl),
+        fetch("/api/status"),
+      ]);
 
-        if (graveyardRes.ok) {
-          const gData = await graveyardRes.json();
-          setRepo(gData.repo);
-          setDeaths(gData.deaths || []);
-        }
-
-        if (statusRes.ok) {
-          const sData = await statusRes.json();
-          setStatus(sData);
-        }
-      } catch (err) {
-        console.error("Failed to load graveyard data:", err);
-      } finally {
-        setLoading(false);
+      if (graveyardRes.ok) {
+        const gData = await graveyardRes.json();
+        setRepo(gData.repo);
+        setDeaths(gData.deaths || []);
+        if (gData.allRepos) setAllRepos(gData.allRepos);
       }
-    }
 
+      if (statusRes.ok) {
+        const sData = await statusRes.json();
+        setStatus(sData);
+      }
+    } catch (err) {
+      console.error("Failed to load graveyard data:", err);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
     loadData();
   }, []);
 
@@ -145,9 +148,23 @@ export default function NecropolisLandingPage() {
                 <span className="text-ash text-[10px] uppercase font-mono tracking-wider block">
                   ARCHAEOLOGICAL TARGET
                 </span>
-                <span className="text-content font-mono font-semibold text-base sm:text-lg block truncate">
-                  {repo.name}
-                </span>
+                {allRepos.length > 1 ? (
+                  <select
+                    value={repo.id}
+                    onChange={(e) => loadData(e.target.value)}
+                    className="w-full bg-surface border border-hairline text-content font-mono font-semibold text-xs sm:text-sm py-1 px-1.5 rounded-sm outline-none cursor-pointer focus:border-content"
+                  >
+                    {allRepos.map((r) => (
+                      <option key={r.id} value={r.id}>
+                        {r.name} ({r.death_count} deaths)
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <span className="text-content font-mono font-semibold text-base sm:text-lg block truncate">
+                    {repo.name}
+                  </span>
+                )}
                 <span className="text-ash text-[10px] font-mono block">Git Historical Ledger</span>
               </div>
 
