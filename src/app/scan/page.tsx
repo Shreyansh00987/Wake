@@ -145,6 +145,17 @@ export default function ScanPage() {
           >
             fixtures/chalk (Terminal styling)
           </button>
+          <button
+            type="button"
+            disabled={scanning}
+            onClick={() => {
+              setRepoPath("fixtures/ghost_lab");
+              triggerScan("fixtures/ghost_lab");
+            }}
+            className="px-3 py-1.5 bg-marigold-dim border border-marigold/60 text-marigold font-medium text-[11px] font-mono hover:bg-marigold hover:text-ground transition-all"
+          >
+            ⚡ fixtures/ghost_lab (Interactive Ghost Lab)
+          </button>
         </div>
       </div>
 
