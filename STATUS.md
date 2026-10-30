@@ -1,21 +1,25 @@
 # Project Status
 
-## Current Phase: P0 Complete -> Transitioning to P1 (Ingestion & Evidence Layer)
+## Current Phase: P1 Complete -> Transitioning to P2 (Obituary Pipeline & Mini-Eval)
 
-### Done (P0)
-- Initialized fresh Git repository on branch `main` inside the entry window (Oct 26 - Oct 31, 2026).
-- Checked official contest pages (`dev.to/challenges/hacktoberfest-week4-2026-10-26` & rules); confirmed 0 conflicts.
-- Installed Impeccable skills and activated design hooks (`.impeccable/config.json`).
-- Documented product truth in `PRODUCT.md` (register: product, users: maintainers and contributors, principles: calm & evidence-first, mode: read & experience).
-- Initialized Next.js 14 App Router, TypeScript, Tailwind CSS, `@fontsource/ibm-plex-*`, `@vscode/ripgrep`, and native `node:sqlite`.
-- Verified Ollama local daemon on `127.0.0.1:11434` with `gemma3:1b` (806MB, Gemma Terms of Use) structured JSON output.
-- Selected and verified two permissive demo fixtures with rich deletion history: `expressjs/cors` (MIT) and `sindresorhus/is` (MIT).
+### Done (P1)
+- Built domain models in `src/types/index.ts` covering deaths, obituaries, hauntings, commit summaries, and scan progress.
+- Implemented embedded SQLite persistence in `src/lib/db/index.ts` using built-in `node:sqlite` (zero C++ compile dependencies).
+- Built safe child_process git executor in `src/lib/git/exec.ts` with strict argument arrays and timeout controls.
+- Built Git Ingestion engine in `src/lib/git/ingest.ts` with rename tracking (`-M`) ensuring renamed and resurrected files are never classified as deaths.
+- Built Evidence Layer in `src/lib/git/evidence.ts` extracting diffstat, author attribution, first-version snippet, and final deletion diffs.
+- Created synthetic git test fixture in `test/ingest.test.ts` verifying renames, deletions, and resurrections (all 3 unit tests pass).
+- Tested against real-world fixture `expressjs/cors` in `test/cors_ingest.test.ts` (verified deaths: CONTRIBUTING.md, .travis.yml, test/mocha.opts, .eslintrc, etc., with zero false positives on renamed test/cors.js).
 
-### Next (P1)
-- Build deterministic Git Ingestion engine (`src/lib/git/ingest.ts`) with rename detection (`git log -M --name-status`).
-- Implement Evidence Layer (`src/lib/git/evidence.ts`) capturing birth commit, death commit, lifespan, last words, authors, and diffstat.
-- Write unit tests against a synthetic git fixture repo created in the test setup (includes renames, deletions, re-additions).
-- Ensure all tests pass cleanly.
+### Next (P2)
+- Build Obituary Pipeline in `src/lib/ai/obituary.ts`:
+  - Structured output prompt with bounded context pack (first version snippet, final diff, commit messages).
+  - Strict JSON schema validation (`summary`, `cause`, `confidence`, `cites`).
+  - SHA citation verifier (MUST reject any SHA not present in supplied commits).
+  - Deterministic template obituary fallback labeled `"template"` on model error or citation rejection.
+- Implement mini-eval harness in `eval/harness.ts` to evaluate Gemma vs Qwen or report real benchmark results in `eval/RESULTS.md`.
+- Run tests on obituary pipeline and fallback states.
 
 ### Risks & Mitigations
-- **Rename Detection Edge Cases:** Files that are renamed and later deleted must have their death recorded against the latest path, with birth traced across renames (`git log --follow`). Synthetic test fixture will validate all variations.
+- **Model Hallucination on Commit SHAs:** The SHA verifier rejects any citation outside the context pack and falls back to deterministic template obituaries, preventing false claims.
+- **Offline / Ollama Unavailable State:** Wake detects when Ollama is unreachable, gracefully uses template obituaries, and renders a copyable `ollama serve` guide in the UI.
