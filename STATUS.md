@@ -1,24 +1,27 @@
 # Project Status
 
-## Current Phase: P2 Complete -> Transitioning to P3 (Haunting Detector & Exorcise Diff Generator)
+## Current Phase: P3 Complete -> Transitioning to P4 (UI & Web Application via Impeccable)
 
-### Done (P2)
-- Implemented Ollama structured output client in `src/lib/ai/client.ts` with strict schema validation and untrusted git data boundary wrappers.
-- Implemented SHA citation verifier in `src/lib/ai/verify.ts` enforcing that all cited commits must exist in the death's verified context pack.
-- Implemented deterministic template obituary generator in `src/lib/ai/template.ts` as an instantaneous, grounded safety floor.
-- Implemented unified pipeline in `src/lib/ai/obituary.ts` which automatically validates citations and seamlessly falls back to template obituaries on hallucination or offline error.
-- Verified obituary pipeline with comprehensive unit test suite in `test/obituary.test.ts` (all 5 unit tests pass).
-- Conducted mini-eval benchmark on 25 hand-labeled real deaths across 3 OSS repositories (`expressjs/cors`, `sindresorhus/is`, `chalk/chalk`). Reported authentic measured numbers in `eval/RESULTS.md` (Gemma 3 1B: 80% citation validity, 1964ms latency; Deterministic Template: 80% accuracy, <1ms latency).
+### Done (P3)
+- Implemented cross-platform ripgrep wrapper in `src/lib/ghosts/ripgrep.ts` using `@vscode/ripgrep` bundled binary with strict child_process argument arrays.
+- Built Haunting Detector in `src/lib/ghosts/hauntings.ts` to identify surviving references to dead files, import paths, and exported symbols.
+- Added robust false-positive filters: ignores vendored packages (`node_modules`), lockfiles (`package-lock.json`, `yarn.lock`, etc.), build directories, requires token length >= 4 chars, filters generic language keywords, and ranks matches by confidence.
+- Implemented Exorcise Diff Generator in `src/lib/ghosts/exorcise.ts` producing standard copy-only unified diffs (strictly read-only; zero mutation of user repositories).
+- Created comprehensive unit test suite in `test/hauntings.test.ts` (100% pass across all 12 tests in the project).
 
-### Next (P3)
-- Build Haunting Detector in `src/lib/ghosts/hauntings.ts` using `@vscode/ripgrep` child process:
-  - Match surviving references to dead paths and exported symbols across surviving code, docs, and configs.
-  - False-positive filters: ignore vendored directories (`node_modules`, `dist`, `.git`), ignore lockfiles, require minimum token length (>= 4 chars), and assign confidence scores.
-  - Produce file, line number, matched snippet, and grounded match reason for each haunting.
-- Implement Exorcise Diff Generator in `src/lib/ghosts/exorcise.ts`:
-  - Produce clean, copy-only unified diffs removing zombie lines/imports.
-  - Strictly read-only (never applies patches automatically).
-- Write unit tests in `test/hauntings.test.ts` covering haunting detection and diff generation.
+### Next (P4)
+- Build the Web Application and UI per the Impeccable design system specification:
+  - Dark graphite ground `oklch(16% 0.01 260)`, crisp text `oklch(92% 0.01 260)`, ash-grey ramp for dead code.
+  - ONE accent: Marigold `oklch(78% 0.15 75)` strictly and solely for "still haunting".
+  - Hairline borders (1px), 2px corners, 4px spacing scale, IBM Plex Sans & IBM Plex Mono self-hosted fonts.
+  - Landing Screen (live-rendered real graveyard of Wake's own repo, plain headline, hairline rows, offline instructions).
+  - Scan Screen with Server-Sent Events (SSE) streaming progress (`POST /api/scan`).
+  - Necropolis View with D3.js timeline visualization of deaths.
+  - Headstone Drawer / Sheet with clickable SHA chips expanding verified commits.
+  - Hauntings View with confidence ranking, code snippets, and Exorcise modal/diff viewer.
+  - All states: empty state ("Nothing has died here yet."), error state (Ollama offline guide with copyable `ollama serve`), path traversal protections.
+- Run `/impeccable document` to record design system in `DESIGN.md`.
 
 ### Risks & Mitigations
-- **Ripgrep False Positives:** Highly common tokens (e.g. `test`, `index`) can cause noisy hits. Mitigated by prioritizing basename matches, requiring boundary regex (`\b...\b`), filtering lockfiles/build dirs, and confidence ranking.
+- **SSE Stream In Sandbox / Localhost:** SSE requires proper headers (`text/event-stream`, `Cache-Control: no-cache`, `Connection: keep-alive`). Test API route to ensure streaming chunks arrive seamlessly.
+- **Font Hosting:** `@fontsource/ibm-plex-sans` and `@fontsource/ibm-plex-mono` imported in global CSS to guarantee 100% offline functionality.

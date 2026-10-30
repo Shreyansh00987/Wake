@@ -1,6 +1,6 @@
-# Phase 2 Plan: Obituary Pipeline, SHA Verifier, Fallbacks & Mini-Eval
-1. Build Ollama client in src/lib/ai/client.ts with structured schema enforcement and prompt isolation of untrusted git data.
-2. Implement SHA verifier in src/lib/ai/verify.ts strictly rejecting any cited commit SHA not present in the context pack.
-3. Implement deterministic template fallback generator in src/lib/ai/template.ts labeled as "template" in the UI.
-4. Combine into unified obituary generator in src/lib/ai/obituary.ts with offline graceful degradation.
-5. Build mini-eval harness in eval/harness.ts, test on hand-labeled deaths, and generate real numbers in eval/RESULTS.md.
+# Phase 3 Plan: Haunting Detector & Exorcise Diff Generation
+1. Implement cross-platform ripgrep wrapper in src/lib/ghosts/ripgrep.ts using child_process argument arrays and @vscode/ripgrep.
+2. Build Haunting Detector in src/lib/ghosts/hauntings.ts with token extraction, path searching, and confidence scoring.
+3. Implement false-positive filters ignoring lockfiles, vendored directories (node_modules, dist, .git), and generic short tokens.
+4. Implement Exorcise diff generator in src/lib/ghosts/exorcise.ts producing copy-only standard unified diffs without modifying files.
+5. Write unit test suite in test/hauntings.test.ts verifying ghost reference matching, confidence rankings, and clean diff generation.
