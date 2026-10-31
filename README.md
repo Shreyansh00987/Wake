@@ -1,10 +1,12 @@
 # Wake: "Every deleted line had a reason."
 
+[![DEV Submission](https://img.shields.io/badge/DEV%20Submission-Ghost%20in%20the%20Machine-0A0A0A?style=flat-square&logo=devdotto&logoColor=white)](https://dev.to/shreyansh_agrahari_2009db/wake-every-deleted-line-had-a-reason-an-archival-git-necropolis-510o)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://wake-necropolis.onrender.com)
 [![Demo Video](https://img.shields.io/badge/Demo%20Video-1%3A12%20Full%20HD-E50914?style=flat-square&logo=mp4&logoColor=white)](wake_demo_walkthrough.mp4)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Shreyansh00987%2FWake-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Shreyansh00987/Wake)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
+> **Official DEV Challenge Submission:** [https://dev.to/shreyansh_agrahari_2009db/wake-every-deleted-line-had-a-reason-an-archival-git-necropolis-510o](https://dev.to/shreyansh_agrahari_2009db/wake-every-deleted-line-had-a-reason-an-archival-git-necropolis-510o)  
 > **Hosted Interactive Necropolis:** [https://wake-necropolis.onrender.com](https://wake-necropolis.onrender.com)  
 > **Demo Walkthrough Video (1:12):** [wake_demo_walkthrough.mp4](wake_demo_walkthrough.mp4) *(1080p Full HD with AI voiceover).*  
 > *(Note: Hosted demo serves authentic precomputed real scans from `samples/wake.json` and `samples/cors.json` since free cloud containers lack local Ollama/GPU runtimes. For live local scans, run via `docker-compose up` or `npm run dev`).*
