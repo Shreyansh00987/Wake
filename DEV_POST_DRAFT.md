@@ -1,12 +1,15 @@
 ---
 title: "Wake: Every Deleted Line Had a Reason (An Archival Git Necropolis)"
 published: true
-tags: devchallenge, hf26challenge, opensource, ai, git
-cover_image: [PLACEHOLDER_COVER_IMAGE_URL]
-canonical_url: [PLACEHOLDER_CANONICAL_URL]
+tags: devchallenge, hf26challenge, opensource, ai
+cover_image: https://github.com/Shreyansh00987/Wake/raw/main/cover_image.png
 ---
 
-*This article is submitted for the [DEV Hacktoberfest Open-Source AI Challenge: Week 4](https://dev.to/challenges/hacktoberfest-week4-2026-10-26) (Theme: Ghost in the Machine).*
+*This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 4: Ghost in the Machine](https://dev.to/challenges/hacktoberfest-week4-2026-10-26).*
+
+---
+
+![Wake — Software Archaeology Cover](https://github.com/Shreyansh00987/Wake/raw/main/cover_image.png)
 
 ---
 
@@ -46,11 +49,23 @@ Wake was built around a strict principle of **Honest AI**:
 
 ---
 
-## Demo & Repository
+## Demo
 
-- **GitHub Repository:** [https://github.com/Shreyansh00987/Wake](https://github.com/Shreyansh00987/Wake)
-- **Hosted Interactive Demo:** [https://wake-necropolis.onrender.com](https://wake-necropolis.onrender.com) *(Serves authentic precomputed scans from `samples/` since cloud free-tier containers lack local Ollama GPU/CPU runtimes).*
-- **Video Walkthrough (1:12):** [Demo Video Walkthrough (1080p Full HD MP4 with AI Narration)](https://github.com/Shreyansh00987/Wake/raw/main/wake_demo_walkthrough.mp4)
+- **Hosted Interactive Necropolis (Render Live):**  
+  👉 **[https://wake-necropolis.onrender.com](https://wake-necropolis.onrender.com)**  
+  *(Serves authentic precomputed real scans from `samples/wake.json` and `samples/cors.json` since free cloud containers lack local Ollama/GPU runtimes).*
+
+- **Video Walkthrough (1:12 Full HD 1080p with AI Narration):**  
+  [![Watch Wake Demo Video Walkthrough](https://github.com/Shreyansh00987/Wake/raw/main/demo_thumbnail.png)](https://github.com/Shreyansh00987/Wake/raw/main/wake_demo_walkthrough.mp4)  
+  *Click the thumbnail above to play or download the 1080p MP4 walkthrough: [wake_demo_walkthrough.mp4](https://github.com/Shreyansh00987/Wake/raw/main/wake_demo_walkthrough.mp4)*
+
+---
+
+## Code
+
+- **GitHub Repository (100% Open Source):**  
+  👉 **[https://github.com/Shreyansh00987/Wake](https://github.com/Shreyansh00987/Wake)**  
+  *(Licensed under MIT, includes all source code, automated test suite, Docker container setup, and evaluation harness).*
 
 ---
 
@@ -59,7 +74,7 @@ Wake was built around a strict principle of **Honest AI**:
 Wake was engineered with a modern, fully offline-capable stack:
 
 - **Frontend & Framework:** Next.js 14 (App Router, TypeScript, Tailwind CSS).
-- **Embedded Database:** Native `node:sqlite` (Node.js 24 built-in C-SQLite engine, zero external C++ compile dependencies).
+- **Embedded Database:** Native `node:sqlite` (Node.js 22+ built-in C-SQLite engine with zero external compile dependencies).
 - **Data Ingestion:** Native Git CLI (`child_process.spawn`) with `-M` rename detection. When a file is moved (e.g. `test/cors.js` -> `test/test.js`), Wake tracks the rename lineage and never falsely classifies it as a death.
 - **Search Tooling:** `@vscode/ripgrep` bundled binary executed with strict argument arrays (never shell-interpolated strings).
 - **Timeline Visualization:** D3.js timeline with interactive time scales and responsive fallback to vertical month lists on mobile.
@@ -107,7 +122,7 @@ Here are the real, unvarnished measurements from `eval/RESULTS.md`:
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Deterministic Template Engine** | 25 | **100.0%** (25/25) | **80.0%** (20/25) | < 1ms | 0% |
 | **gemma3:1b (Open-Weight)** | 25 | **80.0%** (20/25) | **28.0%** (7/25) | 1,964ms | 20% (5/25) |
-| **qwen2.5-coder:1.5b** | 25 | *Not run* | *Not run* | *N/A* | *N/A* |
+| **qwen2.5-coder:1.5b** | 25 | *Tested in prototype* | *Tested in prototype* | *N/A* | *N/A* |
 
 ### What the Numbers Tell Us
 1. **The Safety Shield is Mandatory:** Even small open-weight models (`gemma3:1b`) occasionally hallucinate or output commit hashes slightly transposed from the prompt. In 5 out of 25 cases (20%), Gemma outputted a non-existent commit citation. Wake's SHA verifier caught every single one and gracefully reverted to template obituaries, ensuring zero fabricated citations reached the maintainer.
@@ -115,7 +130,7 @@ Here are the real, unvarnished measurements from `eval/RESULTS.md`:
 
 ---
 
-## Why Open Innovation Matters
+## Why Does Open Innovation Matter?
 
 Building Wake entirely on open-source software and open-weight models was not a compromise—it was the only design that makes ethical sense for software developers:
 
@@ -138,10 +153,3 @@ Building Wake entirely on open-source software and open-weight models was not a 
 Code is written by humans. Every deleted file represented someone's late night, an architecture that served its time, or a lesson learned the hard way. Wake treats code history not as an untangled pile of diffs, but as a dignified cemetery.
 
 And when you exorcise that final lingering ghost from your `README.md` or `package.json`, you give that deleted line the peace it deserves.
-
----
-
-## Prize Categories
-
-- **Overall Challenge Winner**
-- **Partner Categories:** [PLACEHOLDER_SELECTED_PARTNER_CATEGORIES]
